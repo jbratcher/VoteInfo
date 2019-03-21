@@ -6,34 +6,6 @@
   overflow-x: hidden;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  .labelContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-    label {
-      margin: 0.25rem 0;
-    }
-
-    input {
-      margin: 0.25rem 1rem 0.25rem 0;
-    }
-
-  }
-
-  button {
-    max-width: 50vw;
-    width: 30%;
-  }
-
-}
-
-
-
 header, footer {
   background: #eee;
   display: flex;
