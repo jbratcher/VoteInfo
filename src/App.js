@@ -11,25 +11,23 @@ class App extends Component {
 
       dataRecieved: null,
       electionsUrl: `https://www.googleapis.com/civicinfo/v2/elections?key=${apikey}`,
-      street1: "140 pope street",
-      street2: "apt. 1",
-      city: "louisville",
-      state: "kentucky",
-      country: "us",
+      street1: undefined,
+      street2: undefined,
+      city: undefined,
+      state: undefined,
+      country: undefined
 
     }
   }
 
   handleInputChange = e => {
-    console.log(e.target.name);
-    console.log(e.target.value);
     this.setState({
       [e.target.name]: e.target.value
     });
   }
 
   handleSubmit = e => {
-    console.log(e.target.name);
+    e.preventDefault();
     this.fetchData();
   }
 
@@ -53,7 +51,6 @@ class App extends Component {
 
   componentDidMount() {
     console.log("loaded");
-    this.fetchData();
   }
 
 
@@ -133,9 +130,9 @@ class App extends Component {
 
 
             <button
-              type="submit"
+              type="button"
               className="btn btn-primary"
-              onChange={this.handleSubmit}
+              onClick={this.handleSubmit}
             >
               Submit
             </button>
@@ -143,12 +140,35 @@ class App extends Component {
           </form>
 
           { dataRecieved ?
-            <ul>
-              <li>{this.state.data.normalizedInput.line1}</li>
-              <li>{this.state.data.normalizedInput.city}</li>
-              <li>{this.state.data.normalizedInput.state}</li>
-              <li>{this.state.data.normalizedInput.zip}</li>
-            </ul>
+
+            <React.Fragment>
+
+              <h3>Results for a registered address of: </h3>
+
+              <ul>
+                <li>{this.state.data.normalizedInput.line1}</li>
+                <li>{this.state.data.normalizedInput.city}</li>
+                <li>{this.state.data.normalizedInput.state}</li>
+                <li>{this.state.data.normalizedInput.zip}</li>
+              </ul>
+
+
+              <h2>Candidates for US Senate</h2>
+
+              <ul>
+                {this.state.data.contests[0].candidates.map((candidate, key) => {
+                  return <li key={key}>
+                    <ul>
+                      <li>{candidate.name}</li>
+                      <li>{candidate.party}</li>
+                      <li>{candidate.candidateUrl}</li>
+                    </ul>
+                  </li>
+                })}
+              </ul>
+
+            </React.Fragment>
+
           : null}
 
 
