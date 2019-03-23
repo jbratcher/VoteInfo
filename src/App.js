@@ -56,7 +56,10 @@ class App extends Component {
 
   render() {
 
-    const { dataRecieved } = this.state;
+    const {
+      data,
+      dataRecieved
+    } = this.state;
 
     return (
 
@@ -146,26 +149,46 @@ class App extends Component {
               <h3>Results for a registered address of: </h3>
 
               <ul>
-                <li>{this.state.data.normalizedInput.line1}</li>
-                <li>{this.state.data.normalizedInput.city}</li>
-                <li>{this.state.data.normalizedInput.state}</li>
-                <li>{this.state.data.normalizedInput.zip}</li>
+                <li>{data.normalizedInput.line1}</li>
+                <li>{data.normalizedInput.city}</li>
+                <li>{data.normalizedInput.state}</li>
+                <li>{data.normalizedInput.zip}</li>
               </ul>
 
 
-              <h2>Candidates for US Senate</h2>
+              {data.contests.map((contest, key) => {
 
-              <ul>
-                {this.state.data.contests[0].candidates.map((candidate, key) => {
-                  return <li key={key}>
-                    <ul>
-                      <li>{candidate.name}</li>
-                      <li>{candidate.party}</li>
-                      <li>{candidate.candidateUrl}</li>
-                    </ul>
-                  </li>
-                })}
-              </ul>
+                console.log(key)
+
+                return <section className="raceCandidates card" key={key}>
+
+                  <section className="card-header" type="button" data-toggle="collapse" data-target={`#${String.fromCharCode(key+65)}`} aria-expanded="false" aria-controls={`#${String.fromCharCode(key+65)}`}>
+                    <h4 className="card-title">Candidates for {contest.office}</h4>
+                    <p className="card-subtitle">click to expand</p>
+                  </section>
+
+                  <ul className="collapse" id={`${String.fromCharCode(key+65)}`}>
+                    {contest.candidates.map((candidate, key) => {
+                      return <li key={key}>
+
+                        <section className="card">
+                          <section className="card-body">
+                            <h5 className="card-title">{candidate.name}</h5>
+                            <h6 className="card-subtitle mb-2 text-muted">{candidate.party}</h6>
+                            <a href={candidate.candidateUrl} target="_blank" rel="noopener noreferrer" className="card-link">Website</a>
+                          </section>
+                        </section>
+
+                      </li>
+                    })}
+                  </ul>
+
+                </section>
+
+
+              })}
+
+
 
             </React.Fragment>
 
