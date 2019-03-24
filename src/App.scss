@@ -6,6 +6,10 @@
   overflow-x: hidden;
 }
 
+ul {
+  list-style: none;
+}
+
 header, footer {
   background: #eee;
   display: flex;
@@ -39,6 +43,15 @@ main {
     button {
       margin: 0.66rem auto;
     }
+  }
+
+  .listHeader {
+    text-align: center;
+  }
+
+  .racesContainer {
+    width: 90vw;
+    align-self: center;
   }
 
 }
