@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.scss';
 
 class UserAddress extends Component {
 
@@ -19,22 +18,26 @@ class UserAddress extends Component {
   render() {
 
     const {
-      data
+      electionsData
     } = this.props;
 
     return (
 
       <section className="card">
 
-        <h3 className="card-title mt-5">Results for a registered address of: </h3>
+        <section className="card-body">
 
-        <ul className="list-group list-group-flush mt-3 mb-5">
-          <li className="card-text">{data.normalizedInput.line1}</li>
-          <li className="card-text">{data.normalizedInput.line2}</li>
-          <li className="card-text">{data.normalizedInput.city}</li>
-          <li className="card-text">{data.normalizedInput.state}</li>
-          <li className="card-text">{data.normalizedInput.zip}</li>
-        </ul>
+          <h4 className="card-title p-1">Voter registration address: </h4>
+
+          <ul className="list-group list-group-flush pt-3 pb-4">
+            <li className="card-text">{electionsData.normalizedInput.line1}</li>
+            <li className="card-text">{electionsData.normalizedInput.line2}</li>
+            <li className="card-text">{electionsData.normalizedInput.city}</li>
+            <li className="card-text">{electionsData.normalizedInput.state}</li>
+            <li className="card-text">{electionsData.normalizedInput.zip}</li>
+          </ul>
+
+        </section>
 
       </section>
 

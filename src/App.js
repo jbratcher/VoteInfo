@@ -3,6 +3,7 @@ import './App.scss';
 import apikey from './secrets';
 import AddressForm from './AddressForm';
 import UserAddress from './UserAddress';
+import VoterInformation from './VoterInformation';
 import Race from './Race';
 
 class App extends Component {
@@ -12,7 +13,8 @@ class App extends Component {
 
     this.state = {
 
-      dataRecieved: null,
+      electionsData: null,
+      electionsDataRecieved: null,
       electionsUrl: `https://www.googleapis.com/civicinfo/v2/elections?key=${apikey}`,
       street1: undefined,
       street2: undefined,
@@ -31,23 +33,23 @@ class App extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    this.fetchData();
+    this.fetchElectionsData();
   }
 
-  fetchData = () => {
+  fetchElectionsData = () => {
 
     const {street1, city, state} = this.state;
     let voterInfoUrl = `https://www.googleapis.com/civicinfo/v2/voterinfo?key=${apikey}&address=${street1}.${city} ${state}&electionId=2000`;
 
     fetch(voterInfoUrl)
       .then(res => res.json())
-      .then((data) => {
+      .then((electionsData) => {
         this.setState({
-          dataRecieved: true,
-          data: data
+          electionsDataRecieved: true,
+          electionsData: electionsData
         })
       })
-      .then(() => console.log(this.state.data))
+      .then(() => console.log(this.state.electionsData))
       .catch(error => console.log(error))
 
   }
@@ -60,8 +62,8 @@ class App extends Component {
   render() {
 
     const {
-      data,
-      dataRecieved
+      electionsData,
+      electionsDataRecieved
     } = this.state;
 
     return (
@@ -79,32 +81,25 @@ class App extends Component {
             handleSubmit={this.handleSubmit}
           />
 
-          { dataRecieved ?
+          { electionsDataRecieved ?
 
-          <section className="card">
+            <section className="card">
 
-            <UserAddress
-              data={data}
-            />
+              <UserAddress
+                electionsData={electionsData}
+              />
 
-            <h4
-              className="listHeader py-3 mb-3 card-title"
-              type="button"
-              data-toggle="collapse"
-              data-target="#senatorRace"
-              aria-expanded="true"
-              aria-controls="#senatorRace"
-            >
-              Candidate Races for Office
-            </h4>
+              <VoterInformation
+                electionsData={electionsData}
+              />
 
-            <Race
-              data={data}
-            />
+              <Race
+                electionsData={electionsData}
+              />
 
-          </section>
+            </section>
 
-        : null}
+          : null }
 
         </main>
 
