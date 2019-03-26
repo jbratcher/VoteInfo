@@ -18,7 +18,7 @@ class UserAddress extends Component {
   render() {
 
     const {
-      electionsData
+      votingData
     } = this.props;
 
     return (
@@ -41,7 +41,7 @@ class UserAddress extends Component {
           id="senatorRace"
         >
 
-        {electionsData.contests.map((contest, key) => {
+        {votingData.contests.map((contest, key) => {
 
           return <section
             className="raceCandidates card mb-2"

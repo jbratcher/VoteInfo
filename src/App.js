@@ -14,13 +14,14 @@ class App extends Component {
     this.state = {
 
       electionsData: null,
-      electionsDataRecieved: null,
-      electionsUrl: `https://www.googleapis.com/civicinfo/v2/elections?key=${apikey}`,
+      electionsDataRecieved: false,
       street1: undefined,
       street2: undefined,
       city: undefined,
       state: undefined,
-      country: undefined
+      country: undefined,
+      votingData: null,
+      votingDataRecieved: false
 
     }
   }
@@ -33,23 +34,40 @@ class App extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    this.fetchElectionsData();
+    this.fetchElectionData();
+    this.fetchVoterData();
   }
 
-  fetchElectionsData = () => {
+  fetchElectionData = () => {
 
     const {street1, city, state} = this.state;
-    let voterInfoUrl = `https://www.googleapis.com/civicinfo/v2/voterinfo?key=${apikey}&address=${street1}.${city} ${state}&electionId=2000`;
 
-    fetch(voterInfoUrl)
+    fetch(`https://www.googleapis.com/civicinfo/v2/elections?key=${apikey}&address=${street1}.${city} ${state}`)
       .then(res => res.json())
-      .then((electionsData) => {
+      .then(electionsData => {
         this.setState({
-          electionsDataRecieved: true,
-          electionsData: electionsData
+          electionsData: electionsData,
+          electionsDataRecieved: true
         })
       })
-      .then(() => console.log(this.state.electionsData))
+      .then(data => console.log(this.state.electionsData))
+      .catch(error => console.log(error))
+  }
+
+  fetchVoterData = () => {
+
+    const {street1, city, state} = this.state;
+    let votingUrl = `https://www.googleapis.com/civicinfo/v2/voterinfo?key=${apikey}&address=${street1}.${city} ${state}&electionId=2000`;
+
+    fetch(votingUrl)
+      .then(res => res.json())
+      .then((votingData) => {
+        this.setState({
+          votingData: votingData,
+          votingDataRecieved: true
+        })
+      })
+      .then(() => console.log(this.state.votingData))
       .catch(error => console.log(error))
 
   }
@@ -62,8 +80,8 @@ class App extends Component {
   render() {
 
     const {
-      electionsData,
-      electionsDataRecieved
+      votingData,
+      votingDataRecieved
     } = this.state;
 
     return (
@@ -81,20 +99,20 @@ class App extends Component {
             handleSubmit={this.handleSubmit}
           />
 
-          { electionsDataRecieved ?
+          { votingDataRecieved ?
 
             <section className="card">
 
               <UserAddress
-                electionsData={electionsData}
+                votingData={votingData}
               />
 
               <VoterInformation
-                electionsData={electionsData}
+                votingData={votingData}
               />
 
               <Race
-                electionsData={electionsData}
+                votingData={votingData}
               />
 
             </section>
@@ -104,10 +122,11 @@ class App extends Component {
         </main>
 
         <footer>
-          <h3 className="text-secondary">Footer</h3>
+          <h3 className="text-secondary">VoteInfo 2019</h3>
         </footer>
 
       </section>
+
     );
   }
 }

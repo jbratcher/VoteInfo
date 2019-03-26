@@ -18,7 +18,7 @@ class VoterInformation extends Component {
   render() {
 
     const {
-      electionsData
+      votingData
     } = this.props;
 
     return (
@@ -35,7 +35,7 @@ class VoterInformation extends Component {
 
             <li className="my-3">
               <a
-                href={electionsData.state[0].electionAdministrationBody.ballotInfoUrl}
+                href={votingData.state[0].electionAdministrationBody.ballotInfoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -47,7 +47,7 @@ class VoterInformation extends Component {
 
             <li className="my-3">
               <a
-                href={electionsData.state[0].electionAdministrationBody.electionInfoUrl}
+                href={votingData.state[0].electionAdministrationBody.electionInfoUrl}
                 target="_blank"
                 rel="noopener noreferrer">
                   <button type="button" className="btn btn-primary">
@@ -58,7 +58,7 @@ class VoterInformation extends Component {
 
             <li className="my-3">
               <a
-                href={electionsData.state[0].electionAdministrationBody.votingLocationFinderUrl}
+                href={votingData.state[0].electionAdministrationBody.votingLocationFinderUrl}
                 target="_blank"
                 rel="noopener noreferrer">
                   <button type="button" className="btn btn-primary">
@@ -68,10 +68,10 @@ class VoterInformation extends Component {
             </li>
 
             <li className="card-text my-3">
-              <p><b>{electionsData.state[0].electionAdministrationBody.name}</b></p>
-              <p>{electionsData.state[0].electionAdministrationBody.correspondenceAddress.line1},</p>
+              <p><b>{votingData.state[0].electionAdministrationBody.name}</b></p>
+              <p>{votingData.state[0].electionAdministrationBody.correspondenceAddress.line1},</p>
               <p>
-                {electionsData.state[0].electionAdministrationBody.correspondenceAddress.city}, {electionsData.state[0].electionAdministrationBody.correspondenceAddress.state}  {electionsData.state[0].electionAdministrationBody.correspondenceAddress.zip}
+                {votingData.state[0].electionAdministrationBody.correspondenceAddress.city}, {votingData.state[0].electionAdministrationBody.correspondenceAddress.state}  {votingData.state[0].electionAdministrationBody.correspondenceAddress.zip}
               </p>
             </li>
 
