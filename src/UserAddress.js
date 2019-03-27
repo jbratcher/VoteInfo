@@ -23,7 +23,7 @@ class UserAddress extends Component {
 
     return (
 
-      <section className="card">
+      <section className="card userAddress">
 
         <section className="card-body">
 

@@ -18,10 +18,6 @@ header, footer {
   min-height: 15vh;
 }
 
-header {
-
-}
-
 main {
   display: flex;
   flex-direction: column;
@@ -52,6 +48,29 @@ main {
 
 }
 
-footer {
-
+.votingInformation {
+  display: flex;
+  
+  .userAddress, .voterInformation {
+    min-width: 50vw;
+  }
+  
 }
+
+.electionsInformation {
+  width: 50vw;
+}
+
+@media only screen and (max-width: 600px) {
+  
+  .votingInformation {
+    flex-direction: column;
+    justify-content: start;
+  }
+  
+  .electionsInformation {
+    width: 95vw;
+  }
+  
+}
+

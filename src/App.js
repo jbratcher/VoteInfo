@@ -65,10 +65,10 @@ class App extends Component {
         this.setState({
           votingData: votingData,
           votingDataRecieved: true
-        })
+        });
       })
       .then(() => console.log(this.state.votingData))
-      .catch(error => console.log(error))
+      .catch(error => console.log(error));
 
   }
 
@@ -102,18 +102,26 @@ class App extends Component {
           { votingDataRecieved ?
 
             <section className="card">
+            
+              <section className="votingInformation">
 
-              <UserAddress
-                votingData={votingData}
-              />
+                <UserAddress
+                  votingData={votingData}
+                />
+  
+                <VoterInformation
+                  votingData={votingData}
+                />
+                
+              </section>
+              
+              <section className="electionsInformation mx-auto">
+                  
+                <Race
+                  votingData={votingData}
+                />
 
-              <VoterInformation
-                votingData={votingData}
-              />
-
-              <Race
-                votingData={votingData}
-              />
+              </section>
 
             </section>
 
