@@ -89,7 +89,7 @@ class App extends Component {
       <section className="app">
 
         <header role="heading">
-          <h1 className="text-primary">VoteInfo</h1>
+          <h1 className="text-primary display-4 my-2">VoteInfo</h1>
         </header>
 
         <main role="Main">
@@ -116,6 +116,8 @@ class App extends Component {
               </section>
               
               <section className="electionsInformation mx-auto">
+              
+                <h4 className="mt-3 mb-1">Upcoming Races</h4>
                   
                 <Race
                   votingData={votingData}

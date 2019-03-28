@@ -31,7 +31,7 @@ class VoterInformation extends Component {
             Voter Information
           </h4>
 
-          <ul id="voterInformation">
+          <ul id="voterInformationLinks">
 
             <li className="my-3">
               <a
@@ -67,15 +67,16 @@ class VoterInformation extends Component {
               </a>
             </li>
 
-            <li className="card-text my-3">
-              <p><b>{votingData.state[0].electionAdministrationBody.name}</b></p>
-              <p>{votingData.state[0].electionAdministrationBody.correspondenceAddress.line1},</p>
-              <p>
-                {votingData.state[0].electionAdministrationBody.correspondenceAddress.city}, {votingData.state[0].electionAdministrationBody.correspondenceAddress.state}  {votingData.state[0].electionAdministrationBody.correspondenceAddress.zip}
-              </p>
-            </li>
-
           </ul>
+          
+          <section className="card-text mt-5">
+            <h5 className="mb-3">Election Authority Address</h5>
+            <p><b>{votingData.state[0].electionAdministrationBody.name}</b></p>
+            <p>{votingData.state[0].electionAdministrationBody.correspondenceAddress.line1},</p>
+            <p>
+              {votingData.state[0].electionAdministrationBody.correspondenceAddress.city}, {votingData.state[0].electionAdministrationBody.correspondenceAddress.state}  {votingData.state[0].electionAdministrationBody.correspondenceAddress.zip}
+            </p>
+          </section>
 
 
         </section>
