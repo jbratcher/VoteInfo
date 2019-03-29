@@ -24,7 +24,7 @@ class AddressForm extends Component {
 
     return (
 
-      <section className="card">
+      <section className="card addressForm">
 
         <h2 className="card-title">Enter your address:</h2>
 

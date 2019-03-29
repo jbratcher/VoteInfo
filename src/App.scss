@@ -20,59 +20,62 @@ header, footer {
 
 main {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   min-height: 70vh;
+  width: 100vw;
   text-align: center;
-
-  h2 {
-    margin: 2rem auto;
-  }
-
-  form {
-    margin: 0 auto 2rem;
-
-    label {
-      margin: 0.33rem auto;
+  
+  .addressForm {
+    padding: 0 2rem;
+    min-width: 25vw;
+    
+    h2 {
+      margin: 2rem auto;
     }
-
-    button {
-      margin: 0.66rem auto;
+  
+    form {
+      margin: 0 auto 2rem;
+  
+      label {
+        margin: 0.33rem auto;
+      }
+  
+      button {
+        margin: 0.66rem auto;
+      }
     }
+  
   }
-
-  .racesContainer {
-    width: 90vw;
-    align-self: center;
+  
+  .votingInformation {
+    display: flex;
+    min-width: 75vw;
+    
+    .userAddress, .voterInformation {
+      width: 100%;
+    }
+    
+    .userAddress {
+      
+      ul {
+        font-size: 2rem;
+        font-weight: 300;
+      }
+      
+    }
+    
+    #voterInformationLinks {
+      
+      li a button {
+        font-size: 1.5rem;
+      }
+      
+    }
+    
   }
 
 }
 
-.votingInformation {
-  display: flex;
-  
-  .userAddress, .voterInformation {
-    min-width: 50vw;
-  }
-  
-  .userAddress {
-    
-    ul {
-      font-size: 2rem;
-      font-weight: 300;
-    }
-    
-  }
-  
-  #voterInformationLinks {
-    
-    li a button {
-      font-size: 1.5rem;
-    }
-    
-  }
-  
-}
+
 
 .electionsInformation {
   width: 50vw;
@@ -80,13 +83,21 @@ main {
 
 @media only screen and (max-width: 600px) {
   
+  main {
+    flex-direction: column;
+    
+    .addressForm {
+      width: 100%;
+    }
+    
+  }
+  
   .votingInformation {
     flex-direction: column;
-    justify-content: start;
   }
   
   .electionsInformation {
-    width: 95vw;
+    width: 90vw;
   }
   
 }

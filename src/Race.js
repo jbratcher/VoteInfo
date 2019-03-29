@@ -7,7 +7,7 @@ class UserAddress extends Component {
 
     this.state = {
 
-    }
+    };
   }
 
   componentDidMount() {
