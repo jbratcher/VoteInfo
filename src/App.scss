@@ -46,6 +46,14 @@ main {
   
   }
   
+  .informationPlaceholder {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    width: 100%;
+    
+  }
+  
   .votingInformation {
     display: flex;
     min-width: 75vw;
@@ -88,6 +96,10 @@ main {
     
     .addressForm {
       width: 100%;
+    }
+    
+    .informationPlaceholder {
+      padding: 4rem 2rem;
     }
     
   }

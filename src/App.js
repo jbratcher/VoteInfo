@@ -48,10 +48,9 @@ class App extends Component {
         this.setState({
           electionsData: electionsData,
           electionsDataRecieved: true
-        })
+        });
       })
-      .then(data => console.log(this.state.electionsData))
-      .catch(error => console.log(error))
+      .catch(error => console.log(error));
   }
 
   fetchVoterData = () => {
@@ -67,7 +66,6 @@ class App extends Component {
           votingDataRecieved: true
         });
       })
-      .then(() => console.log(this.state.votingData))
       .catch(error => console.log(error));
 
   }
@@ -127,7 +125,16 @@ class App extends Component {
 
             </section>
 
-          : null }
+          :
+            
+            <section className="informationPlaceholder card text-muted">
+           
+              <h4 className="card-title">Please enter your address in the above form</h4>
+              <p className="card-text">Your voting and election information will appear here</p>
+              
+            </section>
+            
+          }
 
         </main>
 

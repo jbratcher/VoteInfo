@@ -1,6 +1,7 @@
 {
-  "name": "voter-info-api",
+  "name": "VoteInfo",
   "version": "0.1.0",
+  "description": "VoteInfo is a voter dashboard voting and election information.", 
   "private": true,
   "homepage": "https://jbratcher.github.io/VoteInfo",
   "scripts": {

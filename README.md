@@ -1,11 +1,10 @@
 # VoteInfo
 
-VoteInfo is a hub for voter and election information.  You can find information on registering to vote, your elected representatives, and upcoming elections in your district.
+VoteInfo is a voter dashboard voting and election information.  You can find information on registering to vote, your elected representatives, and upcoming elections in your district.
 
 Technologies used:
 * React
 * Civic Information API (Google)
-
 
 
 
