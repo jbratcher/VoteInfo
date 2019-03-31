@@ -2,11 +2,19 @@
 
 VoteInfo is a voter dashboard voting and election information.  You can find information on registering to vote, your elected representatives, and upcoming elections in your district.
 
-Technologies used:
+#### Technologies used:
 * React
 * Civic Information API (Google)
 
+#### Features
+* Upcoming elections by office
+* List of candidates for each election
 
+#### Todo
+* Ballot Measures
+
+#### Bugs
+* ?
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

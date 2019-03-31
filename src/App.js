@@ -114,8 +114,6 @@ class App extends Component {
               </section>
               
               <section className="electionsInformation mx-auto">
-              
-                <h4 className="mt-3 mb-1">Upcoming Races</h4>
                   
                 <Race
                   votingData={votingData}
@@ -129,7 +127,7 @@ class App extends Component {
             
             <section className="informationPlaceholder card text-muted">
            
-              <h4 className="card-title">Please enter your address in the above form</h4>
+              <h4 className="card-title">Please enter your address in the form</h4>
               <p className="card-text">Your voting and election information will appear here</p>
               
             </section>

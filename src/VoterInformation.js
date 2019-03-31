@@ -26,12 +26,10 @@ class VoterInformation extends Component {
       <section className="card voterInformation">
 
         <section className="card-body">
+        
+          <h4 className="card-title p-2">Voter Information</h4>
 
-          <h4 className="listHeader card-title mb-4">
-            Voter Information
-          </h4>
-
-          <ul id="voterInformationLinks">
+          <ul className="voterInformationLinks">
 
             <li className="my-3">
               <a

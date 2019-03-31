@@ -49,9 +49,8 @@ main {
   .informationPlaceholder {
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    padding: 8rem 2rem;
     width: 100%;
-    
   }
   
   .votingInformation {
@@ -64,6 +63,8 @@ main {
     
     .userAddress {
       
+      width: 50%;
+      
       ul {
         font-size: 2rem;
         font-weight: 300;
@@ -71,7 +72,7 @@ main {
       
     }
     
-    #voterInformationLinks {
+    .voterInformationLinks {
       
       li a button {
         font-size: 1.5rem;
@@ -80,13 +81,11 @@ main {
     }
     
   }
+  
+  .electionsInformation {
+    width: 50vw;
+  }
 
-}
-
-
-
-.electionsInformation {
-  width: 50vw;
 }
 
 @media only screen and (max-width: 600px) {
@@ -102,15 +101,22 @@ main {
       padding: 4rem 2rem;
     }
     
+    .votingInformation {
+      flex-direction: column;
+      
+      .userAddress {
+        width: 100vw;
+      }
+      
+    }
+    
+    .electionsInformation {
+      width: 90vw;
+    }
+    
   }
   
-  .votingInformation {
-    flex-direction: column;
-  }
   
-  .electionsInformation {
-    width: 90vw;
-  }
   
 }
 
