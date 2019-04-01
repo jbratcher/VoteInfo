@@ -5,6 +5,7 @@ import AddressForm from './AddressForm';
 import UserAddress from './UserAddress';
 import VoterInformation from './VoterInformation';
 import Race from './Race';
+import BallotMeasures from './BallotMeasures'
 
 class App extends Component {
 
@@ -116,6 +117,10 @@ class App extends Component {
               <section className="electionsInformation mx-auto">
                   
                 <Race
+                  votingData={votingData}
+                />
+                
+                <BallotMeasures
                   votingData={votingData}
                 />
 

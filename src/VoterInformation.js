@@ -11,7 +11,7 @@ class VoterInformation extends Component {
   }
 
   componentDidMount() {
-    console.log("address form");
+    console.log("voter information");
   }
 
 

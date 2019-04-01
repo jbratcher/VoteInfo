@@ -11,7 +11,7 @@ class UserAddress extends Component {
   }
 
   componentDidMount() {
-    console.log("address form");
+    console.log("user address");
   }
 
 

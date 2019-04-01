@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class UserAddress extends Component {
+class Race extends Component {
 
   constructor(props) {
     super(props);
@@ -11,7 +11,7 @@ class UserAddress extends Component {
   }
 
   componentDidMount() {
-    console.log("address form");
+    console.log("race");
   }
 
 
@@ -118,4 +118,4 @@ class UserAddress extends Component {
   }
 }
 
-export default UserAddress;
+export default Race;
