@@ -11,7 +11,7 @@ class AddressForm extends Component {
   }
 
   componentDidMount() {
-    console.log("address form");
+    console.log("address form loaded");
   }
 
 

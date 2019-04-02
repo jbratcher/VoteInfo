@@ -87,11 +87,11 @@ class App extends Component {
 
       <section className="app">
 
-        <header role="heading">
+        <header role="heading" aria-label="header">
           <h1 className="text-primary display-4 my-2">VoteInfo</h1>
         </header>
 
-        <main role="Main">
+        <main role="main" aria-label="main">
 
           <AddressForm
             handleInputChange={this.handleInputChange}

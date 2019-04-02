@@ -11,7 +11,7 @@ class Race extends Component {
   }
 
   componentDidMount() {
-    console.log("race");
+    console.log("race loaded");
   }
 
 

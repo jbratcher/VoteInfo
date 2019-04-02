@@ -11,7 +11,7 @@ class BallotMeasures extends Component {
   }
 
   componentDidMount() {
-    console.log("ballots");
+    console.log("ballots loaded");
   }
 
 
@@ -39,18 +39,23 @@ class BallotMeasures extends Component {
                 className="card mb-2"
                 key={key}
               >
-
-                <h5 className="card-title">{contest.referendumTitle}</h5>
-                <h6 className="card-subtitle">{contest.referendumSubtitle}</h6>
-                <p className="card-text">
-                  <a 
-                    href={contest.referendumUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Link
-                  </a>
-                </p>
+                <section className="card-header">
+                  <h5 className="card-title py-1">{contest.referendumTitle}</h5>
+                  <h6 className="card-subtitle py-1">{contest.referendumSubtitle}</h6>
+                </section>
+                
+                <section className="card-body">
+                  
+                  <p className="card-text py-1">
+                    <a 
+                      href={contest.referendumUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Referendum Link
+                    </a>
+                  </p>
+                </section>
 
               </section>
     

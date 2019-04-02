@@ -11,7 +11,7 @@ class UserAddress extends Component {
   }
 
   componentDidMount() {
-    console.log("user address");
+    console.log("user address loaded");
   }
 
 
