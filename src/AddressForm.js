@@ -37,12 +37,13 @@ class AddressForm extends Component {
               className="form-control"
               name="street1"
               aria-describedby="street1Help"
+              aria-label="street1"
               placeholder="Street Address"
               onChange={handleInputChange}
             >
             </input>
             <small
-              id="emailHelp"
+              id="street1Help"
               className="form-text text-muted"
             >
               <em>ex. 1600 Pennsylvania Ave NW</em>
@@ -56,6 +57,7 @@ class AddressForm extends Component {
               className="form-control"
               name="street2"
               aria-describedby="street2Help"
+              aria-label="street2"
               placeholder="Street Address cont."
               onChange={handleInputChange}
             >
@@ -75,6 +77,7 @@ class AddressForm extends Component {
               className="form-control"
               name="city"
               aria-describedby="cityHelp"
+              aria-label="city"
               placeholder="City"
               onChange={handleInputChange}
             >
@@ -93,7 +96,8 @@ class AddressForm extends Component {
               type="text"
               className="form-control"
               name="state"
-              aria-describedby="state"
+              aria-describedby="stateHelp"
+              aria-label="state"
               placeholder="State"
               onChange={handleInputChange}
             >

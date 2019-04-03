@@ -87,7 +87,7 @@ class App extends Component {
 
       <section className="app">
 
-        <header role="heading" aria-label="header">
+        <header role="banner" aria-label="header">
           <h1 className="text-primary display-4 my-2">VoteInfo</h1>
         </header>
 
