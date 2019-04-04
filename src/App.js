@@ -5,7 +5,7 @@ import AddressForm from './AddressForm';
 import UserAddress from './UserAddress';
 import VoterInformation from './VoterInformation';
 import Race from './Race';
-import BallotMeasures from './BallotMeasures'
+import Referendum from './Referendum'
 
 class App extends Component {
 
@@ -72,7 +72,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    console.log("loaded");
+    console.log("App loaded");
   }
 
 
@@ -120,7 +120,7 @@ class App extends Component {
                   votingData={votingData}
                 />
                 
-                <BallotMeasures
+                <Referendum
                   votingData={votingData}
                 />
 
