@@ -1,0 +1,3 @@
+# Robots.txt file for indexing
+
+User-agent: *
