@@ -1,13 +1,13 @@
 {
   "main.css": "/VoteInfo/static/css/main.dc17051e.chunk.css",
-  "main.js": "/VoteInfo/static/js/main.2e038b39.chunk.js",
-  "main.js.map": "/VoteInfo/static/js/main.2e038b39.chunk.js.map",
+  "main.js": "/VoteInfo/static/js/main.2b7aff0e.chunk.js",
+  "main.js.map": "/VoteInfo/static/js/main.2b7aff0e.chunk.js.map",
   "runtime~main.js": "/VoteInfo/static/js/runtime~main.a848771c.js",
   "runtime~main.js.map": "/VoteInfo/static/js/runtime~main.a848771c.js.map",
   "static/js/2.d519b009.chunk.js": "/VoteInfo/static/js/2.d519b009.chunk.js",
   "static/js/2.d519b009.chunk.js.map": "/VoteInfo/static/js/2.d519b009.chunk.js.map",
   "index.html": "/VoteInfo/index.html",
-  "precache-manifest.62fa653001af572b18b888e84e702798.js": "/VoteInfo/precache-manifest.62fa653001af572b18b888e84e702798.js",
+  "precache-manifest.e05f0c4f21d99c88cfae2a53d4c4d7ba.js": "/VoteInfo/precache-manifest.e05f0c4f21d99c88cfae2a53d4c4d7ba.js",
   "service-worker.js": "/VoteInfo/service-worker.js",
   "static/css/main.dc17051e.chunk.css.map": "/VoteInfo/static/css/main.dc17051e.chunk.css.map"
 }
