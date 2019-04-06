@@ -6,6 +6,7 @@ import UserAddress from './UserAddress';
 import VoterInformation from './VoterInformation';
 import Race from './Race';
 import Referendum from './Referendum'
+import ElectedRepresentatives from './ElectedRepresentatives';
 
 class App extends Component {
 
@@ -16,6 +17,8 @@ class App extends Component {
 
       electionsData: null,
       electionsDataRecieved: false,
+      electedRepresentativesData: null,
+      electedRepresentativesDataRecieved: false,
       street1: undefined,
       street2: undefined,
       city: undefined,
@@ -37,6 +40,7 @@ class App extends Component {
   handleSubmit = e => {
     e.preventDefault();
     this.fetchElectionData();
+    this.fetchElectedRepresentativesData();
     this.fetchVoterData();
   }
 
@@ -52,6 +56,22 @@ class App extends Component {
           electionsDataRecieved: true
         });
       })
+      .catch(error => console.log(error));
+  }
+
+  fetchElectedRepresentativesData = () => {
+
+    const {street1, city, state} = this.state;
+
+    fetch(`https://www.googleapis.com/civicinfo/v2/representatives?key=${apikey}&address=${street1}.${city} ${state}`)
+      .then(res => res.json())
+      .then(electedRepresentativesData => {
+        this.setState({
+          electedRepresentativesData: electedRepresentativesData,
+          electedRepresentativesDataRecieved: true
+        });
+      })
+      .then(console.log(this.state.electedRepresentativesData))
       .catch(error => console.log(error));
   }
 
@@ -81,6 +101,8 @@ class App extends Component {
   render() {
 
     const {
+      electedRepresentativesData,
+      electedRepresentativesDataRecieved,
       votingData,
       votingDataArray,
       votingDataRecieved
@@ -104,25 +126,30 @@ class App extends Component {
           { votingDataRecieved ?
 
             <section className="card">
-            
+
               <section className="votingInformation">
 
                 <UserAddress
                   votingData={votingData}
                 />
-  
+
                 <VoterInformation
                   votingData={votingData}
                 />
-                
+
+                <ElectedRepresentatives
+                  electedRepresentativesData={electedRepresentativesData}
+                  electedRepresentativesDataRecieved={electedRepresentativesDataRecieved}
+                />
+
               </section>
-              
+
               <section className="electionsInformation mx-auto">
-                  
+
                 <Race
                   votingData={votingData}
                 />
-                
+
                 <Referendum
                   votingData={votingData}
                   votingDataArray={votingDataArray}
@@ -133,14 +160,14 @@ class App extends Component {
             </section>
 
           :
-            
+
             <section className="informationPlaceholder card text-muted">
-           
+
               <h4 className="card-title">Please enter your address in the form</h4>
               <p className="card-text">Your voting and election information will appear here</p>
-              
+
             </section>
-            
+
           }
 
         </main>
