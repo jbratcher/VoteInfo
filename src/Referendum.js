@@ -18,7 +18,8 @@ class Referendum extends Component {
   render() {
 
     const {
-      votingData
+      votingData,
+      votingDataArray
     } = this.props;
 
     return (
@@ -28,8 +29,8 @@ class Referendum extends Component {
         <h4 className="mt-3 mb-1">Upcoming Referendum</h4>
   
         <section className="card text-center my-5">
-  
-          { votingData ?
+        
+          { votingDataArray[3].some(contest => contest.type === "Referendum") ?
           
             votingData.contests.map((contest, key) => {
             
@@ -67,7 +68,7 @@ class Referendum extends Component {
     
             }) 
             
-          : null }
+          : <p className="card-text my-auto py-2">No upcoming Referendum</p> }
   
           </section>
   

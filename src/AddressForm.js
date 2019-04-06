@@ -7,7 +7,8 @@ class AddressForm extends Component {
 
     this.state = {
 
-    }
+    };
+    
   }
 
   componentDidMount() {
@@ -112,7 +113,7 @@ class AddressForm extends Component {
 
 
           <button
-            type="button"
+            type="submit"
             className="btn btn-primary"
             onClick={handleSubmit}
           >

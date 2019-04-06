@@ -22,6 +22,7 @@ class App extends Component {
       state: undefined,
       country: undefined,
       votingData: null,
+      votingDataArray: null,
       votingDataRecieved: false
 
     }
@@ -64,6 +65,7 @@ class App extends Component {
       .then((votingData) => {
         this.setState({
           votingData: votingData,
+          votingDataArray: Object.values(votingData),
           votingDataRecieved: true
         });
       })
@@ -80,6 +82,7 @@ class App extends Component {
 
     const {
       votingData,
+      votingDataArray,
       votingDataRecieved
     } = this.state;
 
@@ -122,6 +125,7 @@ class App extends Component {
                 
                 <Referendum
                   votingData={votingData}
+                  votingDataArray={votingDataArray}
                 />
 
               </section>
