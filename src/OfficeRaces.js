@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Race extends Component {
+class OfficeRaces extends Component {
 
   constructor(props) {
     super(props);
@@ -33,16 +33,16 @@ class Race extends Component {
             className="py-3"
             type="button"
             data-toggle="collapse"
-            data-target="#senatorRace"
+            data-target="#officeRaces"
             aria-expanded="true"
-            aria-controls="#senatorRace"
+            aria-controls="#officeRaces"
           >
             Candidate Races for Office
           </button>
   
           <section
             className="collapse"
-            id="senatorRace"
+            id="officeRaces"
           >
   
           {votingData ?
@@ -118,4 +118,4 @@ class Race extends Component {
   }
 }
 
-export default Race;
+export default OfficeRaces;

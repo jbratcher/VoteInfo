@@ -4,7 +4,7 @@ import apikey from './secrets';
 import AddressForm from './AddressForm';
 import UserAddress from './UserAddress';
 import VoterInformation from './VoterInformation';
-import Race from './Race';
+import OfficeRaces from './OfficeRaces';
 import Referendum from './Referendum'
 import ElectedRepresentatives from './ElectedRepresentatives';
 
@@ -71,7 +71,6 @@ class App extends Component {
           electedRepresentativesDataRecieved: true
         });
       })
-      .then(console.log(this.state.electedRepresentativesData))
       .catch(error => console.log(error));
   }
 
@@ -146,7 +145,7 @@ class App extends Component {
 
               <section className="electionsInformation mx-auto">
 
-                <Race
+                <OfficeRaces
                   votingData={votingData}
                 />
 

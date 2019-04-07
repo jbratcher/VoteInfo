@@ -23,9 +23,13 @@ class ElectedRepresentatives extends Component {
 
     return (
 
-      <React.Fragment>
+      <section className="card electedRepresentatives">
+      
+      <section className="card-body">
+      
+        <h4 className="card-title p-2">Elected Representatives</h4>
 
-        <section className="electedRepresentatives text-center my-5">
+        <section className="card text-center">
 
           <button
             className="py-3"
@@ -35,7 +39,7 @@ class ElectedRepresentatives extends Component {
             aria-expanded="true"
             aria-controls="#electedRepresentatives"
           >
-            Elected Representatives
+            Current Representatives
           </button>
 
           <section
@@ -79,8 +83,10 @@ class ElectedRepresentatives extends Component {
           </section>
 
         </section>
+        
+      </section>
 
-      </React.Fragment>
+      </section>
 
     );
   }
