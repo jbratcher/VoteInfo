@@ -50,7 +50,7 @@ class ElectedRepresentatives extends Component {
             {electedRepresentativesData ?
   
               electedRepresentativesData.offices.map((office, key) => {
-  
+              
                 return <section
                   className="card mb-2"
                   key={key}
@@ -74,7 +74,7 @@ class ElectedRepresentatives extends Component {
                   >
                   
                   {office.officialIndices.map((officialIndex, key) => {
-    
+                  
                     return <li key={key}>
     
                       <section className="card">
@@ -105,13 +105,13 @@ class ElectedRepresentatives extends Component {
                         </section>
                       </section>
     
-                    </li>
-    
+                    </li>;
+                    
                   })}
                   
                   </ul>
   
-                </section>
+                </section>;
   
                 })
   

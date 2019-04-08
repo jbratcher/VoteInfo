@@ -92,13 +92,13 @@ class OfficeRaces extends Component {
                         </section>
                       </section>
     
-                    </li>
+                    </li>;
     
                   })}
     
                 </ul>
     
-              </section>
+              </section>;
               
             } else {
               return null;
