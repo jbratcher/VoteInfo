@@ -12,11 +12,14 @@ VoteInfo is a voter dashboard voting and election information.  You can find inf
 * Upcoming elections by office
 * List of candidates for each election
 * Upcoming referendum
-* Elected representatives list
+* Elected representatives list by level (federal, state, local)
+
 
 #### Todo
 * More cohesive UI
-* Better list of elected representatives
+* Address to elected representatives
+* Conditional rendering of items not available for all officials
+* Make folder for Elected reps
 
 #### Bugs
 * ?

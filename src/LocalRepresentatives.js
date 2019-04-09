@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class FederalRepresentatives extends Component {
+class LocalRepresentatives extends Component {
 
   constructor(props) {
     super(props);
@@ -11,7 +11,7 @@ class FederalRepresentatives extends Component {
   }
 
   componentDidMount() {
-    console.log("federal representatives loaded");
+    console.log("local representatives loaded");
   }
 
 
@@ -23,11 +23,11 @@ class FederalRepresentatives extends Component {
 
     return (
 
-      <section className="card federalRepresentatives">
+      <section className="card localRepresentatives">
 
         <section className="card-body">
 
-          <h4 className="card-title p-2">Federal Representatives</h4>
+          <h4 className="card-title p-2">Local Representatives</h4>
 
           <section className="card text-center">
 
@@ -35,23 +35,22 @@ class FederalRepresentatives extends Component {
               className="py-3"
               type="button"
               data-toggle="collapse"
-              data-target="#federalRepresentatives"
+              data-target="#localRepresentatives"
               aria-expanded="true"
-              aria-controls="#federalRepresentatives"
+              aria-controls="#localRepresentatives"
             >
-              Federal Representatives
+              Local Representatives
             </button>
 
             <section
               className="collapse"
-              id="federalRepresentatives"
+              id="localRepresentatives"
             >
 
             {electedRepresentativesData ?
 
               electedRepresentativesData.offices
-                .filter(office => office.levels)
-                .filter(office => office.levels[0] === "country")
+                .filter(office => !office.levels)
                 .map((office, key) => {
 
                 return <section
@@ -82,7 +81,7 @@ class FederalRepresentatives extends Component {
 
                       <section className="card">
                         <section className="card-header">
-                         { electedRepresentativesData.officials[officialIndex].photoUrl ?
+                          { electedRepresentativesData.officials[officialIndex].photoUrl ?
                             <figure>
                               <img
                                 className="card-img-top"
@@ -90,7 +89,7 @@ class FederalRepresentatives extends Component {
                                 alt={electedRepresentativesData.officials[officialIndex].name}
                               ></img>
                             </figure>
-                          : null }
+                          : null}
                         </section>
                         <section className="card-body">
                           <h5 className="card-title">
@@ -134,4 +133,4 @@ class FederalRepresentatives extends Component {
   }
 }
 
-export default FederalRepresentatives;
+export default LocalRepresentatives;

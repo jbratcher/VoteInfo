@@ -11,7 +11,7 @@ class StateRepresentatives extends Component {
   }
 
   componentDidMount() {
-    console.log("federal representatives loaded");
+    console.log("state representatives loaded");
   }
 
 
@@ -82,13 +82,15 @@ class StateRepresentatives extends Component {
 
                       <section className="card">
                         <section className="card-header">
-                          <figure>
-                            <img
-                              className="card-img-top"
-                              src={electedRepresentativesData.officials[officialIndex].photoUrl}
-                              alt={electedRepresentativesData.officials[officialIndex].name}
-                            ></img>
-                          </figure>
+                          { electedRepresentativesData.officials[officialIndex].photoUrl ?
+                            <figure>
+                              <img
+                                className="card-img-top"
+                                src={electedRepresentativesData.officials[officialIndex].photoUrl}
+                                alt={electedRepresentativesData.officials[officialIndex].name}
+                              ></img>
+                            </figure>
+                          : null }
                         </section>
                         <section className="card-body">
                           <h5 className="card-title">

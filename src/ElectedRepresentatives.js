@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import FederalRepresentatives from './FederalRepresentatives'
+import FederalRepresentatives from './FederalRepresentatives';
 import StateRepresentatives from './StateRepresentatives';
+import LocalRepresentatives from './LocalRepresentatives';
 
 class ElectedRepresentatives extends Component {
 
@@ -58,6 +59,10 @@ class ElectedRepresentatives extends Component {
               />
 
               <StateRepresentatives
+                electedRepresentativesData={electedRepresentativesData}
+              />
+              
+              <LocalRepresentatives
                 electedRepresentativesData={electedRepresentativesData}
               />
 
