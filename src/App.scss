@@ -50,6 +50,17 @@ main {
 
   }
 
+  .userAddress {
+
+    width: 20vw;
+
+    ul li {
+      font-size: 1.33rem;
+      font-weight: 300;
+    }
+
+  }
+
   .informationPlaceholder {
     display: flex;
     flex-direction: column;
@@ -61,25 +72,12 @@ main {
     display: flex;
     min-width: 75vw;
 
-    .userAddress, .voterInformation, .electedRepresentatives {
+    .voterInformation {
+      width: 40vw;
+    }
+
+    .electedRepresentatives {
       width: 100%;
-    }
-
-    .userAddress {
-
-      ul {
-        font-size: 1.33rem;
-        font-weight: 300;
-      }
-
-    }
-
-    .voterInformationLinks {
-
-      li a button {
-        font-size: 1.5rem;
-      }
-
     }
 
   }

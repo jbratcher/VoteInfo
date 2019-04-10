@@ -26,10 +26,10 @@ class VoterInformation extends Component {
       <section className="card voterInformation">
 
         <section className="card-body">
-        
+
           <h4 className="card-title p-2">Voter Information</h4>
 
-          <ul className="voterInformationLinks">
+          <ul>
 
             <li className="my-3">
               <a
@@ -66,14 +66,16 @@ class VoterInformation extends Component {
             </li>
 
           </ul>
-          
-          <section className="card-text mt-5">
-            <h5 className="mb-3">Election Authority Address</h5>
-            <p><b>{votingData.state[0].electionAdministrationBody.name}</b></p>
-            <p>{votingData.state[0].electionAdministrationBody.correspondenceAddress.line1},</p>
-            <p>
-              {votingData.state[0].electionAdministrationBody.correspondenceAddress.city}, {votingData.state[0].electionAdministrationBody.correspondenceAddress.state}  {votingData.state[0].electionAdministrationBody.correspondenceAddress.zip}
-            </p>
+
+          <section className="card mt-5">
+            <section className="card-body">
+              <h5 className="card-title mb-3">Election Authority Address</h5>
+              <p className="card-text"><b>{votingData.state[0].electionAdministrationBody.name}</b></p>
+              <p className="card-text">{votingData.state[0].electionAdministrationBody.correspondenceAddress.line1},</p>
+              <p className="card-text">
+                {votingData.state[0].electionAdministrationBody.correspondenceAddress.city}, {votingData.state[0].electionAdministrationBody.correspondenceAddress.state}  {votingData.state[0].electionAdministrationBody.correspondenceAddress.zip}
+              </p>
+            </section>
           </section>
 
 

@@ -5,7 +5,7 @@ import AddressForm from './AddressForm';
 import UserAddress from './UserAddress';
 import VoterInformation from './VoterInformation';
 import OfficeRaces from './OfficeRaces';
-import Referendum from './Referendum'
+import Referendum from './Referendum';
 import ElectedRepresentatives from './ElectedRepresentatives';
 
 class App extends Component {
@@ -15,6 +15,7 @@ class App extends Component {
 
     this.state = {
 
+      addressSubmitted: false,
       electionsData: null,
       electionsDataRecieved: false,
       electedRepresentativesData: null,
@@ -42,6 +43,9 @@ class App extends Component {
     this.fetchElectionData();
     this.fetchElectedRepresentativesData();
     this.fetchVoterData();
+    this.setState(prevState => ({
+      addressSubmitted: !this.state.addressSubmitted
+    }))
   }
 
   fetchElectionData = () => {
@@ -100,6 +104,7 @@ class App extends Component {
   render() {
 
     const {
+      addressSubmitted,
       electedRepresentativesData,
       electedRepresentativesDataRecieved,
       votingData,
@@ -117,20 +122,22 @@ class App extends Component {
 
         <main role="main" aria-label="main">
 
-          <AddressForm
-            handleInputChange={this.handleInputChange}
-            handleSubmit={this.handleSubmit}
-          />
+          { votingDataRecieved && addressSubmitted ?
+            <UserAddress
+              votingData={votingData}
+            />
+          : <AddressForm
+                    handleInputChange={this.handleInputChange}
+                    handleSubmit={this.handleSubmit}
+                    />
+          }
+
 
           { votingDataRecieved ?
 
             <section className="card">
 
               <section className="votingInformation">
-
-                <UserAddress
-                  votingData={votingData}
-                />
 
                 <VoterInformation
                   votingData={votingData}
