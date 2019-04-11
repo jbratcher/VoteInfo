@@ -30,7 +30,6 @@ main {
 
   .addressForm {
     padding: 0 2rem;
-    min-width: 25vw;
 
     h2 {
       margin: 2rem auto;
@@ -52,8 +51,6 @@ main {
 
   .userAddress {
 
-    width: 20vw;
-
     ul li {
       font-size: 1.33rem;
       font-weight: 300;
@@ -65,21 +62,10 @@ main {
     display: flex;
     flex-direction: column;
     padding: 8rem 2rem;
-    width: 100%;
   }
 
   .votingInformation {
     display: flex;
-    min-width: 75vw;
-
-    .voterInformation {
-      width: 40vw;
-    }
-
-    .electedRepresentatives {
-      width: 100%;
-    }
-
   }
 
   .electionsInformation {

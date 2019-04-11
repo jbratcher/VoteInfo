@@ -135,9 +135,9 @@ class App extends Component {
 
           { votingDataRecieved ?
 
-            <section className="card">
+            <section className="card col-md-9">
 
-              <section className="votingInformation">
+              <section className="row votingInformation">
 
                 <VoterInformation
                   votingData={votingData}
@@ -167,7 +167,7 @@ class App extends Component {
 
           :
 
-            <section className="informationPlaceholder card text-muted">
+            <section className="card text-muted col-md-9 informationPlaceholder">
 
               <h4 className="card-title">Please enter your address in the form</h4>
               <p className="card-text">Your voting and election information will appear here</p>

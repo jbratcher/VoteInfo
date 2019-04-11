@@ -8,7 +8,7 @@ class AddressForm extends Component {
     this.state = {
 
     };
-    
+
   }
 
   componentDidMount() {
@@ -25,9 +25,9 @@ class AddressForm extends Component {
 
     return (
 
-      <section className="card addressForm">
+      <section className="card col-md-3 addressForm">
 
-        <h2 className="card-title">Enter your address:</h2>
+        <h2 className="card-title">Your address:</h2>
 
         <form>
 

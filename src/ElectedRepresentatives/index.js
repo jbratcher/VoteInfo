@@ -26,7 +26,7 @@ class ElectedRepresentatives extends Component {
 
     return (
 
-      <section className="card electedRepresentatives">
+      <section className="card col-md-6 electedRepresentatives">
 
         <section className="card-body">
 
@@ -61,7 +61,7 @@ class ElectedRepresentatives extends Component {
               <StateRepresentatives
                 electedRepresentativesData={electedRepresentativesData}
               />
-              
+
               <LocalRepresentatives
                 electedRepresentativesData={electedRepresentativesData}
               />
