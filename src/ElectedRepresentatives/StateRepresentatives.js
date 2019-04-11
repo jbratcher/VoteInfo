@@ -32,7 +32,7 @@ class StateRepresentatives extends Component {
           <section className="card text-center">
 
             <button
-              className="py-3"
+              className="btn btn-primary py-3"
               type="button"
               data-toggle="collapse"
               data-target="#stateRepresentatives"
@@ -60,7 +60,7 @@ class StateRepresentatives extends Component {
                 >
 
                   <section
-                    className="card-header"
+                    className="card-header btn btn-primary"
                     type="button"
                     data-toggle="collapse"
                     data-target={`#${office.name}`}

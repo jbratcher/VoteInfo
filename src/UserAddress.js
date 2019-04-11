@@ -44,12 +44,13 @@ class UserAddress extends Component {
 
         <section className="card-footer d-flex align-items-center">
 
-          <span>Change Address</span>
-
-          <i
-            className="btn btn-outline-warning ml-auto fas fa-times"
+          <button 
+            className="btn btn-outline-secondary mx-auto"
             onClick={addressReset}
-          ></i>
+            type="button"
+          >
+            Change Address
+          </button>
 
         </section>
 

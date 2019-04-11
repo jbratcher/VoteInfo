@@ -30,7 +30,7 @@ class OfficeRaces extends Component {
         <section className="card text-center my-5">
   
           <button
-            className="py-3"
+            className="btn btn-primary py-3"
             type="button"
             data-toggle="collapse"
             data-target="#officeRaces"
@@ -57,7 +57,7 @@ class OfficeRaces extends Component {
               >
     
                 <section
-                  className="card-header"
+                  className="card-header btn btn-primary"
                   type="button"
                   data-toggle="collapse"
                   data-target={`#${String.fromCharCode(key+65)}`}
