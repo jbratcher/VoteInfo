@@ -18,12 +18,13 @@ class UserAddress extends Component {
   render() {
 
     const {
+      addressReset,
       votingData
     } = this.props;
 
     return (
 
-      <section className="card col-md-3 userAddress">
+      <section className="card col-md-3 p-2 userAddress">
 
         <section className="card-body">
 
@@ -38,6 +39,17 @@ class UserAddress extends Component {
             <li className="card-text">{votingData.normalizedInput.state}</li>
             <li className="card-text">{votingData.normalizedInput.zip}</li>
           </ul>
+
+        </section>
+
+        <section className="card-footer d-flex align-items-center">
+
+          <span>Change Address</span>
+
+          <i
+            className="btn btn-outline-warning ml-auto fas fa-times"
+            onClick={addressReset}
+          ></i>
 
         </section>
 

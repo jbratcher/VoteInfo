@@ -32,6 +32,12 @@ class App extends Component {
     }
   }
 
+  addressReset = () => {
+    this.setState({
+      addressSubmitted: false
+    })
+  }
+
   handleInputChange = e => {
     this.setState({
       [e.target.name]: e.target.value
@@ -124,6 +130,7 @@ class App extends Component {
 
           { votingDataRecieved && addressSubmitted ?
             <UserAddress
+              addressReset={this.addressReset}
               votingData={votingData}
             />
           : <AddressForm
