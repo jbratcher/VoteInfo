@@ -157,7 +157,7 @@ class App extends Component {
 
               </section>
 
-              <section className="electionsInformation mx-auto">
+              <section className="electionsInformation">
 
                 <OfficeRaces
                   votingData={votingData}

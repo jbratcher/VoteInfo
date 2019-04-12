@@ -16,10 +16,8 @@ VoteInfo is a voter dashboard voting and election information.  You can find inf
 
 
 #### Todo
-* More cohesive UI
 * Address to elected representatives
 * Conditional rendering of items not available for all officials
-* Make folder for Elected reps
 
 #### Bugs
 * ?

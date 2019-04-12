@@ -23,7 +23,7 @@ class OfficeRaces extends Component {
 
     return (
       
-      <React.Fragment>
+      <section>
       
         <h4 className="mt-3 mb-1">Upcoming Races</h4>
   
@@ -112,7 +112,7 @@ class OfficeRaces extends Component {
   
         </section>
         
-      </React.Fragment>
+      </section>
 
     );
   }

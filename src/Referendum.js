@@ -24,7 +24,7 @@ class Referendum extends Component {
 
     return (
       
-      <React.Fragment>
+      <section>
       
         <h4 className="mt-3 mb-1">Upcoming Referendum</h4>
   
@@ -72,7 +72,7 @@ class Referendum extends Component {
   
           </section>
   
-      </React.Fragment>
+      </section>
 
     );
   }
