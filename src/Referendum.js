@@ -24,11 +24,11 @@ class Referendum extends Component {
 
     return (
       
-      <section>
+      <section className="card col-md-6">
       
-        <h4 className="mt-3 mb-1">Upcoming Referendum</h4>
-  
-        <section className="card text-center my-5">
+        <section className="card-body text-center my-5">
+      
+          <h4 className="card-title p-2">Upcoming Referendum</h4>
         
           { votingDataArray[3].some(contest => contest.type === "Referendum") ?
           
