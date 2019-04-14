@@ -120,13 +120,13 @@ class App extends Component {
 
     return (
 
-      <section className="app">
+      <section className="app container-fluid">
 
-        <header role="banner" aria-label="header">
+        <header className="row" role="banner" aria-label="header">
           <h1 className="text-primary display-4 my-2">VoteInfo</h1>
         </header>
-
-        <main role="main" aria-label="main">
+ 
+        <main className="row" role="main" aria-label="main">
 
           { votingDataRecieved && addressSubmitted ?
             <UserAddress
@@ -185,7 +185,7 @@ class App extends Component {
 
         </main>
 
-        <footer>
+        <footer className="row">
           <h3 className="text-secondary">VoteInfo 2019</h3>
         </footer>
 
