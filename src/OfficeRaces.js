@@ -23,7 +23,7 @@ class OfficeRaces extends Component {
 
     return (
       
-      <section className="card col-md-6">
+      <section className="card">
       
         <section className="card-body text-center my-5">
       

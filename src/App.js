@@ -120,13 +120,13 @@ class App extends Component {
 
     return (
 
-      <section className="app container-fluid">
+      <section className="app">
 
-        <header className="row" role="banner" aria-label="header">
+        <header role="banner" aria-label="header">
           <h1 className="text-primary display-4 my-2">VoteInfo</h1>
         </header>
  
-        <main className="row" role="main" aria-label="main">
+        <main role="main" aria-label="main">
 
           { votingDataRecieved && addressSubmitted ?
             <UserAddress
@@ -142,9 +142,9 @@ class App extends Component {
 
           { votingDataRecieved ?
 
-            <section className="card col-md-9">
+            <section className="card dataOutput">
 
-              <section className="row votingInformation">
+              <section className="votingInformation">
 
                 <VoterInformation
                   votingData={votingData}
@@ -157,7 +157,7 @@ class App extends Component {
 
               </section>
 
-              <section className="row electionsInformation">
+              <section className="electionsInformation">
 
                 <OfficeRaces
                   votingData={votingData}
@@ -174,7 +174,7 @@ class App extends Component {
 
           :
 
-            <section className="card text-muted col-md-9 informationPlaceholder">
+            <section className="card text-muted informationPlaceholder">
 
               <h4 className="card-title">Please enter your address in the form</h4>
               <p className="card-text">Your voting and election information will appear here</p>
@@ -184,9 +184,46 @@ class App extends Component {
           }
 
         </main>
-
-        <footer className="row">
-          <h3 className="text-secondary">VoteInfo 2019</h3>
+        
+        <footer>
+        
+          <section className="subfooter py-3">
+            <ul className="nav justify-content-center">
+              <li className="nav-item">
+                <a 
+                  className="nav-link active" 
+                  href="https://developers.google.com/civic-information/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Google Civic Information API
+                </a>
+              </li>
+              <li className="nav-item">
+                <a 
+                  className="nav-link active" 
+                  href="https://www.votinginfoproject.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Voting Information Project (VIP)
+                </a>
+              </li>
+              <li className="nav-item">
+                <a 
+                  className="nav-link active" 
+                  href="https://ballotpedia.org/Main_Page"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Ballotpedia
+                </a>
+              </li>
+            </ul>
+          </section>
+          
+          <h3 className="text-secondary py-3">VoteInfo 2019</h3>
+          
         </footer>
 
       </section>

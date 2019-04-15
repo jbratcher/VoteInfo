@@ -24,7 +24,7 @@ class UserAddress extends Component {
 
     return (
 
-      <section className="card col-md-3 p-2 userAddress">
+      <section className="card p-2 userAddress">
 
         <section className="card-body">
 

@@ -23,7 +23,7 @@ class VoterInformation extends Component {
 
     return (
 
-      <section className="card col-md-6 voterInformation">
+      <section className="card voterInformation">
 
         <section className="card-body">
 
