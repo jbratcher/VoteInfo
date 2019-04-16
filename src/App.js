@@ -125,7 +125,7 @@ class App extends Component {
         <header role="banner" aria-label="header">
           <h1 className="text-primary display-4 my-2">VoteInfo</h1>
         </header>
- 
+
         <main role="main" aria-label="main">
 
           { votingDataRecieved && addressSubmitted ?
@@ -142,7 +142,7 @@ class App extends Component {
 
           { votingDataRecieved ?
 
-            <section className="card dataOutput">
+            <section className=" dataOutput">
 
               <section className="votingInformation">
 
@@ -184,14 +184,14 @@ class App extends Component {
           }
 
         </main>
-        
+
         <footer>
-        
+
           <section className="subfooter py-3">
             <ul className="nav justify-content-center">
               <li className="nav-item">
-                <a 
-                  className="nav-link active" 
+                <a
+                  className="nav-link active"
                   href="https://developers.google.com/civic-information/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -200,8 +200,8 @@ class App extends Component {
                 </a>
               </li>
               <li className="nav-item">
-                <a 
-                  className="nav-link active" 
+                <a
+                  className="nav-link active"
                   href="https://www.votinginfoproject.org/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -210,8 +210,8 @@ class App extends Component {
                 </a>
               </li>
               <li className="nav-item">
-                <a 
-                  className="nav-link active" 
+                <a
+                  className="nav-link active"
                   href="https://ballotpedia.org/Main_Page"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -221,9 +221,9 @@ class App extends Component {
               </li>
             </ul>
           </section>
-          
+
           <h3 className="text-secondary py-3">VoteInfo 2019</h3>
-          
+
         </footer>
 
       </section>

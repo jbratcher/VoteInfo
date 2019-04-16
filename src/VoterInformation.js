@@ -27,9 +27,9 @@ class VoterInformation extends Component {
 
         <section className="card-body">
 
-          <h4 className="card-title p-2">Voter Information</h4>
+          <h4 className="card-title p-2" hidden >Voter Information</h4>
 
-          <ul>
+          <ul className="voteInfoButtons">
 
             <li className="my-3">
               <a
