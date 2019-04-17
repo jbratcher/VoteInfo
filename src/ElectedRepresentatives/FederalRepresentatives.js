@@ -29,50 +29,26 @@ class FederalRepresentatives extends Component {
 
           <h4 className="card-title p-2">Federal Representatives</h4>
 
-          <section className="card text-center">
-
-            <button
-              className="btn btn-primary py-3"
-              type="button"
-              data-toggle="collapse"
-              data-target="#federalRepresentatives"
-              aria-expanded="true"
-              aria-controls="#federalRepresentatives"
-            >
-              Federal Representatives
-            </button>
+          <section className="text-center">
 
             <section
-              className="collapse"
-              id="federalRepresentatives"
+              className="representatives"
             >
 
             {electedRepresentativesData ?
-
+              // get offices that have a level key/value that is "country" and iterate
               electedRepresentativesData.offices
                 .filter(office => office.levels)
                 .filter(office => office.levels[0] === "country")
                 .map((office, key) => {
 
                 return <section
-                  className="card mb-2"
+                  className="card"
                   key={office.name}
                 >
 
-                  <section
-                    className="card-header btn btn-primary"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target={`#${office.name}`}
-                    aria-expanded="false"
-                    aria-controls={`#${office.name}`}
-                  >
-                    <h5 className="card-title">{office.name}</h5>
-                    <p className="card-subtitle">click to expand</p>
-                  </section>
-
                   <ul
-                    className="collapse"
+                    className="officeInfoList"
                     id={`${office.name}`}
                   >
 
@@ -82,6 +58,9 @@ class FederalRepresentatives extends Component {
 
                       <section className="card">
                         <section className="card-header">
+                        <section className="card-title">
+                          <h5 className="card-title">{office.name}</h5>
+                        </section>
                          { electedRepresentativesData.officials[officialIndex].photoUrl ?
                             <figure>
                               <img
@@ -96,6 +75,9 @@ class FederalRepresentatives extends Component {
                           <h5 className="card-title">
                             {electedRepresentativesData.officials[officialIndex].name}
                           </h5>
+                          <h6 className="card-subtitle mb-2 text-muted">
+                            {electedRepresentativesData.officials[officialIndex].party}
+                          </h6>
                           <h6 className="card-subtitle mb-2 text-muted">
                             {electedRepresentativesData.officials[officialIndex].party}
                           </h6>

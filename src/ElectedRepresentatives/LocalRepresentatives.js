@@ -23,28 +23,16 @@ class LocalRepresentatives extends Component {
 
     return (
 
-      <section className="card localRepresentatives">
+      <section className="card">
 
         <section className="card-body">
 
           <h4 className="card-title p-2">Local Representatives</h4>
 
-          <section className="card text-center">
-
-            <button
-              className="btn btn-primary py-3"
-              type="button"
-              data-toggle="collapse"
-              data-target="#localRepresentatives"
-              aria-expanded="true"
-              aria-controls="#localRepresentatives"
-            >
-              Local Representatives
-            </button>
+          <section className="text-center">
 
             <section
-              className="collapse"
-              id="localRepresentatives"
+              className="localRepresentatives"
             >
 
             {electedRepresentativesData ?
@@ -54,24 +42,12 @@ class LocalRepresentatives extends Component {
                 .map((office, key) => {
 
                 return <section
-                  className="card mb-2"
+                  className="card"
                   key={office.name}
                 >
 
-                  <section
-                    className="card-header btn btn-primary"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target={`#${office.name}`}
-                    aria-expanded="false"
-                    aria-controls={`#${office.name}`}
-                  >
-                    <h5 className="card-title">{office.name}</h5>
-                    <p className="card-subtitle">click to expand</p>
-                  </section>
-
                   <ul
-                    className="collapse"
+                    className="officeInfoList"
                     id={`${office.name}`}
                   >
 
@@ -81,6 +57,9 @@ class LocalRepresentatives extends Component {
 
                       <section className="card">
                         <section className="card-header">
+                        <section className="card-title">
+                          <h5 className="card-title">{office.name}</h5>
+                        </section>
                           { electedRepresentativesData.officials[officialIndex].photoUrl ?
                             <figure>
                               <img
