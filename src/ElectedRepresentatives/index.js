@@ -30,19 +30,19 @@ class ElectedRepresentatives extends Component {
 
         <section className="card-body">
 
-          <h4 className="card-title p-2">Elected Representatives</h4>
+          <h4 className="card-title p-2" hidden>Elected Representatives</h4>
 
-          <section className="card text-center">
+          <section className="card representativesCard">
 
             <button
-              className="btn btn-primary py-3"
+              className="btn btn-primary"
               type="button"
               data-toggle="collapse"
               data-target="#electedRepresentatives"
               aria-expanded="true"
               aria-controls="#electedRepresentatives"
             >
-              Current Representatives
+              Your Representatives
             </button>
 
             <section

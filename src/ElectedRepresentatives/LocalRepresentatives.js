@@ -37,7 +37,6 @@ class LocalRepresentatives extends Component {
 
             electedRepresentativesData.offices
               .filter(office => !office.levels)
-              .filter(office => office.name !== "Constable")
               .map((office, key) => {
 
               return <section
