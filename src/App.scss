@@ -107,40 +107,47 @@ main {
 
 }
 
-.representatives {
+.federalRepresentatives, .stateRepresentatives, .localRepresentatives {
   display: grid;
-  grid-template-columns: repeat(2, 1fr) 2fr 1fr;
-
-  .card-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 6.5rem;
-  }
   
-  .officeInfoList {
+  &>.card {
     display: flex;
+    flex-direction: row;
+    
+    &>.card {
+      width: 100%;
+    }
+    
   }
   
 }
 
-.stateRepresentatives, .localRepresentatives {
-  display: grid;
+.federalRepresentatives {
+  grid-template-columns: repeat(2, 1fr) 2fr 1fr;
+}
+
+.stateRepresentatives {
   grid-template-columns: repeat(4, 1fr);
-  
-  .card-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 6.5rem;
-  }
-  
+}
+
+.localRepresentatives {
+  grid-template-columns: repeat(6, 1fr);
 }
 
 h5.card-title {
   white-space: pre-wrap;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 10vh;
+  max-height: 10vh;
+}
+
+.federalRepresentatives .card-header {
+    min-height: 22vh;
 }
 
 footer {
