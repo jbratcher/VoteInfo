@@ -1,7 +1,7 @@
 .app {
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  min-width: 100vw;
   overflow-x: hidden;
 }
 
@@ -85,11 +85,21 @@ main {
     
     .voterInformation {
       grid-area: 1 / 1 / 2 / 2;
+      
+      &>.card-body {
+        display: flex;
+        flex-direction: row;
+      }
+      
     }
 
     .voteInfoButtons {
       display: flex;
-      justify-content: space-around;
+       
+      li {
+        margin: 0 1rem;
+      }
+      
     }
     
     .electedRepresentatives {
@@ -106,6 +116,15 @@ main {
 
   }
 
+}
+
+.representativesCard, .officeRacesCard, .upcomingRacesCard, .upcomingReferendumCard {
+  
+  button {
+    width: 50%;
+    margin: 1rem auto;
+  }
+  
 }
 
 .federalRepresentatives, .stateRepresentatives, .localRepresentatives {
@@ -152,6 +171,13 @@ main {
   
 }
 
+.raceCandidates > .card-body {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+
+
 h5.card-title {
   white-space: pre-wrap;
 }
@@ -166,16 +192,6 @@ h5.card-title {
 
 .federalRepresentatives .card-header {
     min-height: 22vh;
-}
-
-.representativesCard {
-  border: none;
-  
-  button {
-    margin: 0 auto 1rem;
-    width: 50%;
-  }
-  
 }
 
 footer {
@@ -204,7 +220,6 @@ footer {
 
     .votingInformation, .electionsInformation {
       flex-direction: column;
-
     }
 
 

@@ -28,49 +28,45 @@ class ElectedRepresentatives extends Component {
 
       <section className="card electedRepresentatives">
 
-        <section className="card-body">
+        <h4 className="card-title" hidden>Elected Representatives</h4>
 
-          <h4 className="card-title p-2" hidden>Elected Representatives</h4>
+        <section className="card representativesCard">
 
-          <section className="card representativesCard">
+          <button
+            className="btn btn-primary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#electedRepresentatives"
+            aria-expanded="true"
+            aria-controls="#electedRepresentatives"
+          >
+            Your Representatives
+          </button>
 
-            <button
-              className="btn btn-primary"
-              type="button"
-              data-toggle="collapse"
-              data-target="#electedRepresentatives"
-              aria-expanded="true"
-              aria-controls="#electedRepresentatives"
-            >
-              Your Representatives
-            </button>
+          <section
+            className="collapse"
+            id="electedRepresentatives"
+          >
 
-            <section
-              className="collapse"
-              id="electedRepresentatives"
-            >
+          { electedRepresentativesData ?
 
-            { electedRepresentativesData ?
+          <section>
 
-            <section>
+            <FederalRepresentatives
+              electedRepresentativesData={electedRepresentativesData}
+            />
 
-              <FederalRepresentatives
-                electedRepresentativesData={electedRepresentativesData}
-              />
+            <StateRepresentatives
+              electedRepresentativesData={electedRepresentativesData}
+            />
 
-              <StateRepresentatives
-                electedRepresentativesData={electedRepresentativesData}
-              />
+            <LocalRepresentatives
+              electedRepresentativesData={electedRepresentativesData}
+            />
 
-              <LocalRepresentatives
-                electedRepresentativesData={electedRepresentativesData}
-              />
+          </section>
 
-            </section>
-
-            : null }
-
-            </section>
+          : null }
 
           </section>
 

@@ -24,11 +24,20 @@ class Referendum extends Component {
 
     return (
       
-      <section className="card">
+      <section className="card upcomingReferendumCard">
       
-        <section className="card-body text-center my-5">
-      
-          <h4 className="card-title p-2">Upcoming Referendum</h4>
+        <button
+          className="btn btn-primary"
+          type="button"
+          data-toggle="collapse"
+          data-target="#upcomingReferendum"
+          aria-expanded="true"
+          aria-controls="#upcomingReferendum"
+        >
+          Upcoming Referendum
+        </button>
+        
+        <section className="collapse" id="upcomingReferendum">
         
           { votingDataArray[3].some(contest => contest.type === "Referendum") ?
           
@@ -37,17 +46,16 @@ class Referendum extends Component {
               if(contest.type === "Referendum") {
       
                 return <section
-                  className="card mb-2"
+                  className="card referendum"
                   key={key}
                 >
-                  <section className="card-header">
-                    <h5 className="card-title py-1">{contest.referendumTitle}</h5>
-                    <h6 className="card-subtitle py-1">{contest.referendumSubtitle}</h6>
-                  </section>
-                  
+                
                   <section className="card-body">
-                    
-                    <p className="card-text py-1">
+                
+                    <h5 className="card-title">{contest.referendumTitle}</h5>
+                    <h6 className="card-subtitle">{contest.referendumSubtitle}</h6>
+
+                    <p className="card-text">
                       <a 
                         href={contest.referendumUrl}
                         target="_blank"
@@ -56,6 +64,7 @@ class Referendum extends Component {
                         Referendum Link
                       </a>
                     </p>
+                    
                   </section>
   
                 </section>;
@@ -68,7 +77,7 @@ class Referendum extends Component {
     
             }) 
             
-          : <p className="card-text my-auto py-2">No upcoming Referendum</p> }
+          : <p className="card-text my-auto">No upcoming Referendum</p> }
   
           </section>
   

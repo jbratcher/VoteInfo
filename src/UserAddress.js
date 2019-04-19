@@ -24,13 +24,13 @@ class UserAddress extends Component {
 
     return (
 
-      <section className="card p-2 userAddress">
+      <section className="card userAddress">
 
         <section className="card-body">
 
-          <h4 className="card-title p-2">Voter registration address: </h4>
+          <h4 className="card-title">Your registration address: </h4>
 
-          <ul className="list-group list-group-flush pt-3 pb-4">
+          <ul className="list-group list-group-flush">
             <li className="card-text">{votingData.normalizedInput.line1}</li>
             { votingData.normalizedInput.line2 ?
               <li className="card-text">{votingData.normalizedInput.line2}</li>
@@ -42,10 +42,10 @@ class UserAddress extends Component {
 
         </section>
 
-        <section className="card-footer d-flex align-items-center">
+        <section className="card-footer">
 
           <button 
-            className="btn btn-outline-secondary mx-auto"
+            className="btn btn-outline-secondary"
             onClick={addressReset}
             type="button"
           >

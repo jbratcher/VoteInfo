@@ -23,29 +23,22 @@ class OfficeRaces extends Component {
 
     return (
       
-      <section className="card">
+      <section className="card upcomingRacesCard">
       
-        <section className="card-body text-center my-5">
-      
-          <h4 className="card-title p-2">Upcoming Races</h4>
-          
-          <section className="card text-center">
-  
-            <button
-              className="btn btn-primary py-3"
-              type="button"
-              data-toggle="collapse"
-              data-target="#officeRaces"
-              aria-expanded="true"
-              aria-controls="#officeRaces"
-            >
-              Candidate Races for Office
-            </button>
-    
-            <section
-              className="collapse"
-              id="officeRaces"
-            >
+        <button
+          className="btn btn-primary"
+          type="button"
+          data-toggle="collapse"
+          data-target="#upcomingRaces"
+          aria-expanded="true"
+          aria-controls="#upcomingRaces"
+        >
+          Upcoming Races
+        </button>
+        
+        <section className="collapse" id="upcomingRaces">
+            
+          <section className="card text-center officeRaces">
     
             {votingData ?
             
@@ -54,35 +47,24 @@ class OfficeRaces extends Component {
               if(contest.candidates) {
       
                 return <section
-                  className="raceCandidates card mb-2"
+                  className="card raceCandidates"
                   key={key}
                 >
       
                   <section
-                    className="card-header btn btn-primary"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target={`#${String.fromCharCode(key+65)}`}
-                    aria-expanded="false"
-                    aria-controls={`#${String.fromCharCode(key+65)}`}
+                    className="card-header"
                   >
                     <h5 className="card-title">{contest.office}</h5>
-                    <p className="card-subtitle">click to expand</p>
                   </section>
-      
-                  <ul
-                    className="collapse"
-                    id={`${String.fromCharCode(key+65)}`}
-                  >
-      
-                    {contest.candidates.map((candidate, key) => {
-      
-                      return <li key={key}>
-      
-                        <section className="card">
+                  
+                  <section className="card-body">
+        
+                      {contest.candidates.map((candidate, key) => {
+        
+                        return <section className="card" key={key}>
                           <section className="card-body">
                             <h5 className="card-title">{candidate.name}</h5>
-                            <h6 className="card-subtitle mb-2 text-muted">{candidate.party}</h6>
+                            <h6 className="card-subtitle text-muted">{candidate.party}</h6>
                             <a
                               href={candidate.candidateUrl}
                               target="_blank"
@@ -93,12 +75,10 @@ class OfficeRaces extends Component {
                             </a>
                           </section>
                         </section>
-      
-                      </li>;
-      
-                    })}
-      
-                  </ul>
+        
+                      })}
+        
+                  </section>
       
                 </section>;
                 
@@ -110,12 +90,10 @@ class OfficeRaces extends Component {
               
               :null }
     
-            </section>
-          
           </section>
-  
+          
         </section>
-        
+      
       </section>
 
     );

@@ -27,11 +27,11 @@ class VoterInformation extends Component {
 
         <section className="card-body">
 
-          <h4 className="card-title p-2" hidden >Voter Information</h4>
+          <h4 className="card-title" hidden >Voter Information</h4>
 
           <ul className="voteInfoButtons">
 
-            <li className="my-3">
+            <li>
               <a
                 href={votingData.state[0].electionAdministrationBody.ballotInfoUrl}
                 target="_blank"
@@ -43,7 +43,7 @@ class VoterInformation extends Component {
               </a>
             </li>
 
-            <li className="my-3">
+            <li>
               <a
                 href={votingData.state[0].electionAdministrationBody.electionInfoUrl}
                 target="_blank"
@@ -54,7 +54,7 @@ class VoterInformation extends Component {
               </a>
             </li>
 
-            <li className="my-3">
+            <li>
               <a
                 href={votingData.state[0].electionAdministrationBody.votingLocationFinderUrl}
                 target="_blank"
@@ -67,17 +67,18 @@ class VoterInformation extends Component {
 
           </ul>
 
-          <section className="card mt-5">
+          <section className="card">
+          
             <section className="card-body">
-              <h5 className="card-title mb-3">Election Authority Address</h5>
+              <h5 className="card-title">Election Authority Address</h5>
               <p className="card-text"><b>{votingData.state[0].electionAdministrationBody.name}</b></p>
               <p className="card-text">{votingData.state[0].electionAdministrationBody.correspondenceAddress.line1},</p>
               <p className="card-text">
                 {votingData.state[0].electionAdministrationBody.correspondenceAddress.city}, {votingData.state[0].electionAdministrationBody.correspondenceAddress.state}  {votingData.state[0].electionAdministrationBody.correspondenceAddress.zip}
               </p>
             </section>
+            
           </section>
-
 
         </section>
 
