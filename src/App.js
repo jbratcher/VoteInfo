@@ -123,7 +123,41 @@ class App extends Component {
       <section className="app">
 
         <header role="banner" aria-label="header">
-          <h1 className="text-primary display-4 my-2">VoteInfo</h1>
+
+          <nav class="navbar navbar-expand-lg navbar-light">
+          
+            <a class="navbar-brand card" id="brand" href="#top">
+              <h1>VoteInfo</h1>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse card" id="mainNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#top">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#top">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#top" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#navbarDropdown">Action</a>
+                    <a class="dropdown-item" href="#navbarDropdown">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#navbarDropdown">Something else here</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            
+          </nav>
+
         </header>
 
         <main role="main" aria-label="main">
