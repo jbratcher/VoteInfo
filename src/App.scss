@@ -35,6 +35,7 @@ header {
   background: #eee;
   align-items: center;
   grid-area: 1 / 1 / 2 / 7;
+  padding: 0.5rem 0;
   
   .navbar {
     display: grid;
@@ -60,17 +61,8 @@ header {
     
     #mainNav {
       background: #eee;
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      grid-area: 1 / 2 / 2 / 7;
-      width: 100%;
-      height: 100%;
-      
-      ul {
-        margin-right: 2rem;
-      }
-      
+      margin-left: auto;
+      margin-right: 3rem;
     }
     
   }
@@ -279,19 +271,34 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
+  
+  .app {
+    display: flex;
+    flex-direction: column;
+  }
 
   main {
     display: flex;
     flex-direction: column;
+    
+    .addressForm, .userAddress, .dataOutput, .votingInformation, .electionsInformation {
+      display: flex;
+      flex-direction: column;
+      grid-area: none;
+    }
 
     .informationPlaceholder {
       padding: 4rem 2rem;
     }
-
-    .votingInformation, .electionsInformation {
+    
+    .voteInfoButtons {
       flex-direction: column;
+      justify-content: space-around;
     }
 
+  .federalRepresentatives, .stateRepresentatives {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   }
 
