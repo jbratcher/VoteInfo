@@ -55,6 +55,7 @@ class VoterInformation extends Component {
             </li>
 
             <li>
+              
               <a
                 href={votingData.state[0].electionAdministrationBody.votingLocationFinderUrl}
                 target="_blank"
@@ -67,7 +68,7 @@ class VoterInformation extends Component {
 
           </ul>
 
-          <section className="card">
+          <section className="card electionAuthorityAddress">
           
             <section className="card-body">
               <h5 className="card-title">Election Authority Address</h5>

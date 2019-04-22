@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.scss';
 import apikey from './secrets';
+import Header from './Header';
+import Footer from './Footer';
 import AddressForm from './AddressForm';
 import UserAddress from './UserAddress';
 import VoterInformation from './VoterInformation';
@@ -29,13 +31,18 @@ class App extends Component {
       votingDataArray: null,
       votingDataRecieved: false
 
-    }
+    };
   }
 
   addressReset = () => {
     this.setState({
-      addressSubmitted: false
-    })
+      addressSubmitted: false,
+      street1: "",
+      street2: "",
+      city: "",
+      state: "",
+      country: ""
+    });
   }
 
   handleInputChange = e => {
@@ -122,43 +129,7 @@ class App extends Component {
 
       <section className="app">
 
-        <header role="banner" aria-label="header">
-
-          <nav className="navbar navbar-expand-lg navbar-light">
-          
-            <a className="navbar-brand" id="brand" href="#top">
-              <h1>VoteInfo</h1>
-            </a>
-            
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="navbar-toggler-icon"></span>
-            </button>
-          
-            <div className="collapse navbar-collapse" id="mainNav">
-              <ul className="navbar-nav">
-                <li className="nav-item active">
-                  <a className="nav-link" href="#top">Home <span className="sr-only">(current)</span></a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#top">Link</a>
-                </li>
-                <li className="nav-item dropdown">
-                  <a className="nav-link dropdown-toggle" href="#top" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a className="dropdown-item" href="#navbarDropdown">Action</a>
-                    <a className="dropdown-item" href="#navbarDropdown">Another action</a>
-                    <div className="dropdown-divider"></div>
-                    <a className="dropdown-item" href="#navbarDropdown">Something else here</a>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            
-          </nav>
-
-        </header>
+        <Header />
 
         <main role="main" aria-label="main">
 
@@ -219,46 +190,7 @@ class App extends Component {
 
         </main>
 
-        <footer>
-
-          <section className="subfooter py-3">
-            <ul className="nav justify-content-center">
-              <li className="nav-item">
-                <a
-                  className="nav-link active"
-                  href="https://developers.google.com/civic-information/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Google Civic Information API
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  className="nav-link active"
-                  href="https://www.votinginfoproject.org/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Voting Information Project (VIP)
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  className="nav-link active"
-                  href="https://ballotpedia.org/Main_Page"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Ballotpedia
-                </a>
-              </li>
-            </ul>
-          </section>
-
-          <h3 className="text-secondary py-3">VoteInfo 2019</h3>
-
-        </footer>
+        <Footer />
 
       </section>
 

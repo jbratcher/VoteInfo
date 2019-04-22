@@ -22,8 +22,8 @@ h5.card-title {
 
 .app {
   display: grid;
-  grid-template-columns: 1fr 5fr;
-  grid-template-rows: 1fr 9fr 2fr;
+  grid-template-columns: 2fr 10fr;
+  grid-template-rows: minmax(2rem, 5rem) 10fr 1fr;
   min-width: 100vw;
   min-height: 100vh;
   overflow-x: hidden;
@@ -34,7 +34,7 @@ h5.card-title {
 header {
   background: #eee;
   align-items: center;
-  grid-area: 1 / 1 / 2 / 7;
+  grid-area: 1 / 1 / 2 / 13;
   padding: 0.5rem 0;
   
   .navbar {
@@ -74,7 +74,7 @@ header {
 
 main {
   display: grid;
-  grid-area: 2 / 1 / 11 / 7;
+  grid-area: 2 / 1 / 12 / 13;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 0.5rem;
@@ -148,10 +148,16 @@ main {
     
     .voterInformation {
       grid-area: 1 / 1 / 2 / 2;
+      height: min-content;
       
       &>.card-body {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
+      }
+      
+      .electionAuthorityAddress {
+        height: min-content;
       }
       
     }
@@ -260,7 +266,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  grid-area: 11 / 1 / 12 / 7;
+  grid-area: 12 / 1 / 13 / 13;
 
   .subfooter {
     background: #eee;

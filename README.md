@@ -9,15 +9,19 @@ VoteInfo is a voter dashboard voting and election information.  You can find inf
 * Civic Information API (Google)
 
 #### Features
+* Enter any US address
+* Voter Ballot and registration info
+* Get to know your elected reps at any level
 * Upcoming elections by office
 * List of candidates for each election
-* Upcoming referendum
-* Elected representatives list by level (federal, state, local)
+* Upcoming ballot measures and referendum
 
 
 #### Todo
-* Address to elected representatives
+* Address for elected representatives
 * Conditional rendering of items not available for all officials
+* Dashboard UI
+* More expandable sections
 
 #### Bugs
 * ?
