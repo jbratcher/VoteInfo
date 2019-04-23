@@ -25,73 +25,87 @@ class LocalRepresentatives extends Component {
 
       <section className="card">
 
-        <section className="card-header">
-
-          <h4 className="card-title p-2">Local Representatives</h4>
+        <h4 className="card-title" hidden>Local Representatives</h4>
           
-        </section>
+        <button
+          className="btn btn-primary"
+          type="button"
+          data-toggle="collapse"
+          data-target="#localReps"
+          aria-expanded="true"
+          aria-controls="#localReps"
+        >
+          Local Representatives
+        </button>
 
-        <section className="card-body text-center localRepresentatives">
+        <section
+          className="collapse"
+          id="localReps"
+        >
 
-          {electedRepresentativesData ?
-
-            electedRepresentativesData.offices
-              .filter(office => !office.levels)
-              .map((office, key) => {
-
-              return <section
-                className="card"
-                key={office.name}
-              >
-
-                {office.officialIndices.map((officialIndex, key) => {
-
-                  return <section className="card" key={key}>
-                  
-                    <section className="card-header">
+          <section className="card-body text-center localRepresentatives">
+  
+            {electedRepresentativesData ?
+  
+              electedRepresentativesData.offices
+                .filter(office => !office.levels)
+                .map((office, key) => {
+  
+                return <section
+                  className="card"
+                  key={office.name}
+                >
+  
+                  {office.officialIndices.map((officialIndex, key) => {
+  
+                    return <section className="card" key={key}>
                     
-                      <h5 className="card-title">{office.name}</h5>
+                      <section className="card-header">
                       
-                    </section>
-                    
-                    <section className="card-body">
-                    
-                      { electedRepresentativesData.officials[officialIndex].photoUrl ?
-                        <figure>
-                          <img
-                            className="card-img-top"
-                            src={electedRepresentativesData.officials[officialIndex].photoUrl}
-                            alt={electedRepresentativesData.officials[officialIndex].name}
-                          ></img>
-                        </figure>
-                      : null}
-                    
-                      <h5 className="card-text">
-                        {electedRepresentativesData.officials[officialIndex].name}
-                      </h5>
-                      <h6 className="card-text mb-2 text-muted">
-                        {electedRepresentativesData.officials[officialIndex].party}
-                      </h6>
-                      <a
-                        href={electedRepresentativesData.officials[officialIndex].urls}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="card-link"
-                      >
-                        Website
-                      </a>
+                        <h5 className="card-title">{office.name}</h5>
+                        
+                      </section>
                       
-                    </section>
-                    
-                  </section>
-
-                })}
-
-              </section>;
-
-              })
-
-            :null }
+                      <section className="card-body">
+                      
+                        { electedRepresentativesData.officials[officialIndex].photoUrl ?
+                          <figure>
+                            <img
+                              className="card-img-top"
+                              src={electedRepresentativesData.officials[officialIndex].photoUrl}
+                              alt={electedRepresentativesData.officials[officialIndex].name}
+                            ></img>
+                          </figure>
+                        : null}
+                      
+                        <h5 className="card-text">
+                          {electedRepresentativesData.officials[officialIndex].name}
+                        </h5>
+                        <h6 className="card-text mb-2 text-muted">
+                          {electedRepresentativesData.officials[officialIndex].party}
+                        </h6>
+                        <a
+                          href={electedRepresentativesData.officials[officialIndex].urls}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="card-link"
+                        >
+                          Website
+                        </a>
+                        
+                      </section>
+                      
+                    </section>;
+  
+                  })}
+  
+                </section>;
+  
+                })
+  
+              :null }
+            
+          </section>
 
         </section>
 

@@ -25,75 +25,93 @@ class FederalRepresentatives extends Component {
 
       <section className="card">
 
-        <section className="card-header">
+        <h4 className="card-title" hidden>Federal Representatives</h4>
+        
+        <section className="card federalRepresentativesCard">
 
-          <h4 className="card-title">Federal Representatives</h4>
+          <button
+            className="btn btn-primary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#fedReps"
+            aria-expanded="true"
+            aria-controls="#fedReps"
+          >
+            Federal Representatives
+          </button>
+
+          <section
+            className="collapse"
+            id="fedReps"
+          >
           
-        </section>
-
-        <section className="card-body text-center federalRepresentatives">
-
-          {electedRepresentativesData ?
-            // get offices that have a level key/value that is "country" and iterate
-            electedRepresentativesData.offices
-              .filter(office => office.levels)
-              .filter(office => office.levels[0] === "country")
-              .map((office, key) => {
-
-              return <section
-                className="card"
-                key={office.name}
-              >
-
-                {office.officialIndices.map((officialIndex, key) => {
-
-                  return <section className="card" key={key}>
-                    
-                    <section className="card-header">
-                    
-                      <h5 className="card-title">{office.name}</h5>
-
-                    </section>
-                    
-                    <section className="card-body">
-                    
-                      { electedRepresentativesData.officials[officialIndex].photoUrl ?
+            <section className="federalRepresentatives card-body text-center">
+            
+            {electedRepresentativesData ?
+              // get offices that have a level key/value that is "country" and iterate
+              electedRepresentativesData.offices
+                .filter(office => office.levels)
+                .filter(office => office.levels[0] === "country")
+                .map((office, key) => {
+  
+                return <section
+                  className="card"
+                  key={office.name}
+                >
+  
+                  {office.officialIndices.map((officialIndex, key) => {
+  
+                    return <section className="card" key={key}>
                       
-                      <figure>
-                        <img
-                          className="card-img-top"
-                          src={electedRepresentativesData.officials[officialIndex].photoUrl}
-                          alt={electedRepresentativesData.officials[officialIndex].name}
-                        ></img>
-                      </figure>
+                      <section className="card-header">
                       
-                      : null }
-                  
-                      <h5 className="card-title">
-                        {electedRepresentativesData.officials[officialIndex].name}
-                      </h5>
-                      <h6 className="card-subtitle mb-2 text-muted">
-                        {electedRepresentativesData.officials[officialIndex].party}
-                      </h6>
-                      <a
-                        href={electedRepresentativesData.officials[officialIndex].urls}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="card-link"
-                      >
-                        Website
-                      </a>
-                    </section>
+                        <h5 className="card-title">{office.name}</h5>
+  
+                      </section>
+                      
+                      <section className="card-body">
+                      
+                        { electedRepresentativesData.officials[officialIndex].photoUrl ?
+                        
+                        <figure>
+                          <img
+                            className="card-img-top"
+                            src={electedRepresentativesData.officials[officialIndex].photoUrl}
+                            alt={electedRepresentativesData.officials[officialIndex].name}
+                          ></img>
+                        </figure>
+                        
+                        : null }
                     
-                  </section>;
-
-                })}
-
-              </section>;
-
-              })
-
-            :null }
+                        <h5 className="card-title">
+                          {electedRepresentativesData.officials[officialIndex].name}
+                        </h5>
+                        <h6 className="card-subtitle mb-2 text-muted">
+                          {electedRepresentativesData.officials[officialIndex].party}
+                        </h6>
+                        <a
+                          href={electedRepresentativesData.officials[officialIndex].urls}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="card-link"
+                        >
+                          Website
+                        </a>
+                      </section>
+                      
+                    </section>;
+  
+                  })}
+  
+                </section>;
+  
+                })
+  
+              :null }
+            
+            </section>
+            
+          </section>
 
         </section>
 
