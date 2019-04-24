@@ -28,7 +28,7 @@ class LocalRepresentatives extends Component {
         <h4 className="card-title" hidden>Local Representatives</h4>
           
         <button
-          className="btn btn-primary"
+          className="btn btn-info"
           type="button"
           data-toggle="collapse"
           data-target="#localReps"

@@ -51,14 +51,26 @@ class OfficeRaces extends Component {
                   key={key}
                 >
       
-                  <section
-                    className="card-header"
-                  >
-                    <h5 className="card-title">{contest.office}</h5>
-                  </section>
+                  <h5 className="card-title" hidden>{contest.office}</h5>
                   
-                  <section className="card-body">
+                  <button
+                    className="btn btn-info"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target={`#${contest.office}upcoming`}
+                    aria-expanded="true"
+                    aria-controls={`#${contest.office}upcoming`}
+                  >
+                    {contest.office}
+                  </button>
         
+                  <section
+                    className="collapse"
+                    id={`${contest.office}upcoming`}
+                  >
+                    
+                    <section className="card-body">
+          
                       {contest.candidates.map((candidate, key) => {
         
                         return <section className="card" key={key}>
@@ -77,6 +89,8 @@ class OfficeRaces extends Component {
                         </section>
         
                       })}
+                        
+                    </section>
         
                   </section>
       

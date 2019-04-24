@@ -30,7 +30,7 @@ class FederalRepresentatives extends Component {
         <section className="card federalRepresentativesCard">
 
           <button
-            className="btn btn-primary"
+            className="btn btn-info"
             type="button"
             data-toggle="collapse"
             data-target="#fedReps"
