@@ -50,21 +50,39 @@ class Referendum extends Component {
                   key={key}
                 >
                 
-                  <section className="card-body">
+                  <button
+                    className="btn btn-secondary"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target={`#${contest.referendumTitle}upcoming`}
+                    aria-expanded="true"
+                    aria-controls={`#${contest.referendumTitle}upcoming`}
+                  >
+                    {contest.referendumTitle}
+                  </button>
+        
+                  <section
+                    className="collapse"
+                    id={`${contest.referendumTitle}upcoming`}
+                  >
                 
-                    <h5 className="card-title">{contest.referendumTitle}</h5>
-                    <h6 className="card-subtitle">{contest.referendumSubtitle}</h6>
-
-                    <p className="card-text">
-                      <a 
-                        href={contest.referendumUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Referendum Link
-                      </a>
-                    </p>
-                    
+                    <section className="card-body">
+                  
+                      <h5 className="card-title">{contest.referendumTitle}</h5>
+                      <h6 className="card-subtitle">{contest.referendumSubtitle}</h6>
+  
+                      <p className="card-text">
+                        <a 
+                          href={contest.referendumUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Referendum Link
+                        </a>
+                      </p>
+                      
+                    </section>
+                  
                   </section>
   
                 </section>;

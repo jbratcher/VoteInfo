@@ -54,7 +54,7 @@ class OfficeRaces extends Component {
                   <h5 className="card-title" hidden>{contest.office}</h5>
                   
                   <button
-                    className="btn btn-info"
+                    className="btn btn-secondary"
                     type="button"
                     data-toggle="collapse"
                     data-target={`#${contest.office}upcoming`}
