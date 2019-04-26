@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import VoteInfoButtons from './VoteInfoButtons';
-import ElectionAuthorityAddress from './ElectionAuthorityAddress';
 
 
 class VoterInformation extends Component {
@@ -26,18 +25,10 @@ class VoterInformation extends Component {
 
     return (
 
-      <section className="card voterInformation">
-
-        <VoteInfoButtons 
-          votingData={votingData}
-        />
-
-        <ElectionAuthorityAddress 
-          votingData={votingData}
-        />
+      <VoteInfoButtons 
+        votingData={votingData}
+      />
           
-      </section>
-
     );
   }
 }
