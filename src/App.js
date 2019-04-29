@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import './App.scss';
 import apikey from './secrets';
-import Header from './Header';
-import Footer from './Footer';
-import AddressForm from './AddressForm';
-import UserAddress from './UserAddress';
-import VoterInformation from './VoterInformation';
-import OfficeRaces from './OfficeRaces';
-import Referendum from './Referendum';
-import ElectedRepresentatives from './ElectedRepresentatives';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import AddressForm from './components/AddressForm';
+import UserAddress from './components/UserAddress';
+import VoterInformation from './components/VoterInformation';
+import OfficeRaces from './components/OfficeRaces';
+import Referendum from './components/Referendum';
+import ElectedRepresentatives from './components/ElectedRepresentatives';
 
 class App extends Component {
 
