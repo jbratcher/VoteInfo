@@ -25,8 +25,6 @@ class UserAddress extends Component {
 
     return (
       
-      <React.Fragment>
-
         <section className="card userAddress">
   
           <section className="card-body">
@@ -56,15 +54,13 @@ class UserAddress extends Component {
             </button>
   
           </section>
+          
+          <ElectionAuthorityAddress 
+            votingData={votingData}
+          />
   
         </section>
         
-        <ElectionAuthorityAddress 
-          votingData={votingData}
-        />
-        
-      </React.Fragment>
-
     );
   }
 }

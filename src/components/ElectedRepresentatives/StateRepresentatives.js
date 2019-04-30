@@ -28,7 +28,7 @@ class StateRepresentatives extends Component {
         <h4 className="card-title" hidden>State Representatives</h4>
         
         <button
-            className="btn btn-info"
+            className="btn btn-secondary"
             type="button"
             data-toggle="collapse"
             data-target="#stateReps"
