@@ -179,7 +179,7 @@ class App extends Component {
 
           :
 
-            <section className="card text-muted informationPlaceholder">
+            <section className="card votingInformationPlaceholder">
 
               <h4 className="card-title">Please enter your address in the form</h4>
               <p className="card-text">Your voting and election information will appear here</p>

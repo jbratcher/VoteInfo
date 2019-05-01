@@ -23,13 +23,13 @@ class ElectionAuthorityAddress extends Component {
 
     return (
 
-      <section className="card electionAuthorityAddress">
+      <section className="electionAuthorityAddress">
       
-        <section className="card-body">
-          <h5 className="card-title">Election Authority Address</h5>
-          <p className="card-text"><b>{votingData.state[0].electionAdministrationBody.name}</b></p>
-          <p className="card-text">{votingData.state[0].electionAdministrationBody.correspondenceAddress.line1},</p>
-          <p className="card-text">
+        <section>
+          <h5>Election Authority Address</h5>
+          <p><b>{votingData.state[0].electionAdministrationBody.name}</b></p>
+          <p>{votingData.state[0].electionAdministrationBody.correspondenceAddress.line1},</p>
+          <p>
             {votingData.state[0].electionAdministrationBody.correspondenceAddress.city}, {votingData.state[0].electionAdministrationBody.correspondenceAddress.state}  {votingData.state[0].electionAdministrationBody.correspondenceAddress.zip}
           </p>
         </section>

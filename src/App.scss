@@ -107,33 +107,38 @@ main {
   }
 
   .userAddress {
+    display: flex;
+    flex-direction: column;
     grid-area: 1 / 1 / 2 / 2;
-    max-height: min-content;
-
-    ul li {
-      font-size: 1.33rem;
-      font-weight: 300;
-      line-height: 1.5;
-    }
+    max-height: max-content;
     
     .card-body {
       flex: 0 1 auto;
+      
+      &>* {
+        margin: 2rem 0;
+      }
+      
+      ul li {
+        font-size: 1.33rem;
+        font-weight: 300;
+        line-height: 1.5;
+      }
+      
     }
     
-    .card-footer {
-      margin-top: 3rem;
-    }
 
   }
   
   .electionAuthorityAddress {
-    max-height: min-content;
+    max-height: max-content;
   }
 
-  .informationPlaceholder {
+  .votingInformationPlaceholder {
+    color: #6c757d;
     display: flex;
     flex-direction: column;
-    grid-area: 1 / 2 / 1 / 7;
+    grid-area: 1 / 2 / 3 / 7;
     padding: 8rem 2rem;
   }
 
@@ -153,7 +158,7 @@ main {
     
     .voterInformation {
       grid-area: 1 / 1 / 2 / 2;
-      height: min-content;
+      height: max-content;
       
       &>.card-body {
         display: flex;
