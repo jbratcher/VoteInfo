@@ -1,5 +1,9 @@
 // classes and html tags modification
 
+h1 {
+  margin-bottom: 0;
+}
+
 ul {
   list-style: none;
 }
@@ -33,10 +37,11 @@ h5.card-title {
 
 header {
   background: #eee;
+  display: flex;
   align-items: center;
   grid-area: 1 / 1 / 2 / 13;
-  padding: 0.5rem 0;
-  
+  padding: 0.5rem 0 1rem 0;
+
   .navbar {
     display: grid;
     grid-template-columns: 1fr 5fr;
@@ -51,8 +56,7 @@ header {
       justify-content: center;
       grid-area: 1 / 1 / 2 / 2;
       padding: 0;
-      width: 100%;
-     
+
       h1 {
         color: #007bff;
       }  
@@ -106,32 +110,46 @@ main {
 
   }
 
-  .userAddress {
+  .registrationAddress {
     display: flex;
     flex-direction: column;
-    grid-area: 1 / 1 / 2 / 2;
-    max-height: max-content;
-    
+    grid-area: 1 / 1 / 3 / 2;
+
     .card-body {
       flex: 0 1 auto;
+      padding: 1.25rem 0;
       
-      &>* {
-        margin: 2rem 0;
+      .userAddress {
+        padding: 1rem;
+        
+        ul li {
+          font-size: 1.33rem;
+          font-weight: 300;
+          line-height: 1.5;
+        }
+      
       }
       
-      ul li {
-        font-size: 1.33rem;
-        font-weight: 300;
-        line-height: 1.5;
+      .changeAddress {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+        border-top: 1px solid rgba(0, 0, 0, 0.125);
+        border-radius: 0.25rem;
+        
+        button {
+          margin: 1rem 0;
+          padding: 1rem;
+        }
+      
+      }
+      
+      .electionAuthorityAddress {
+        margin-top: 3rem;
+        padding: 1rem;
       }
       
     }
     
 
-  }
-  
-  .electionAuthorityAddress {
-    max-height: max-content;
   }
 
   .votingInformationPlaceholder {
@@ -170,6 +188,7 @@ main {
 
     .voteInfoButtons {
       display: flex;
+      justify-content: space-around;
        
       li {
         margin: 0 1rem;
@@ -292,7 +311,7 @@ footer {
     display: flex;
     flex-direction: column;
     
-    .addressForm, .userAddress, .dataOutput, .votingInformation, .electionsInformation {
+    .addressForm, .registrationAddress, .dataOutput, .votingInformation, .electionsInformation {
       display: flex;
       flex-direction: column;
       grid-area: none;
@@ -302,9 +321,19 @@ footer {
       padding: 4rem 2rem;
     }
     
-    .voteInfoButtons {
+    .votingInformation .voteInfoButtons {
       flex-direction: column;
-      justify-content: space-around;
+      
+      ul {
+        margin: 0;
+        
+        li {
+          margin: 0.5rem 0;
+        }
+      
+      } 
+      
+      
     }
 
   .federalRepresentatives, .stateRepresentatives {

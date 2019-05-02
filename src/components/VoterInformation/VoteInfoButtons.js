@@ -23,7 +23,7 @@ class VoteInfoButtons extends Component {
 
     return (
 
-      <section className="card-body">
+      <section className="card-body voteInfoButtons">
 
         <h4 className="card-title" hidden >Voter Information</h4>
 
