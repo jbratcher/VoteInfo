@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ElectionAuthorityAddress from './VoterInformation/ElectionAuthorityAddress';
+import ElectionAuthorityAddress from './ElectionAuthorityAddress';
 
 class UserAddress extends Component {
 

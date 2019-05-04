@@ -3,8 +3,7 @@ import './App.scss';
 import apikey from './secrets';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import AddressForm from './components/AddressForm';
-import UserAddress from './components/UserAddress';
+import VoterAddresses from './components/VoterAddresses';
 import VoterInformation from './components/VoterInformation';
 import OfficeRaces from './components/OfficeRaces';
 import Referendum from './components/Referendum';
@@ -133,16 +132,14 @@ class App extends Component {
 
         <main role="main" aria-label="main">
 
-          { votingDataRecieved && addressSubmitted ?
-            <UserAddress
-              addressReset={this.addressReset}
-              votingData={votingData}
-            />
-          : <AddressForm
-                    handleInputChange={this.handleInputChange}
-                    handleSubmit={this.handleSubmit}
-                    />
-          }
+          <VoterAddresses 
+            addressReset={this.addressReset}
+            addressSubmitted={addressSubmitted}
+            handleInputChange={this.handleInputChange}
+            handleSubmit={this.handleSubmit}
+            votingData={votingData}
+            votingDataRecieved={votingDataRecieved}
+          />
 
 
           { votingDataRecieved ?
