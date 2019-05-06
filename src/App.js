@@ -5,8 +5,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import VoterAddresses from './components/VoterAddresses';
 import VoterInformation from './components/VoterInformation';
-import OfficeRaces from './components/OfficeRaces';
-import Referendum from './components/Referendum';
+import Elections from './components/Elections';
 import ElectedRepresentatives from './components/ElectedRepresentatives';
 
 class App extends Component {
@@ -161,11 +160,7 @@ class App extends Component {
 
               <section className="electionsInformation">
 
-                <OfficeRaces
-                  votingData={votingData}
-                />
-
-                <Referendum
+                <Elections 
                   votingData={votingData}
                   votingDataArray={votingDataArray}
                 />
