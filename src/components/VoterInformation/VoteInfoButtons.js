@@ -25,9 +25,9 @@ class VoteInfoButtons extends Component {
 
       <section className="card-body voteInfoButtons">
 
-        <h4 className="card-title" hidden >Voter Information</h4>
+        <h4 className="card-title" >Voter Information</h4>
 
-        <ul className="voteInfoButtons">
+        <ul>
 
           <li>
             <a
@@ -36,7 +36,7 @@ class VoteInfoButtons extends Component {
               rel="noopener noreferrer"
             >
               <button type="button" className="btn btn-primary">
-                Current Ballot
+                View Current Ballot
               </button>
             </a>
           </li>
@@ -47,7 +47,7 @@ class VoteInfoButtons extends Component {
               target="_blank"
               rel="noopener noreferrer">
                 <button type="button" className="btn btn-primary">
-                  Election Info
+                  Find Election Info
                 </button>
             </a>
           </li>
@@ -59,7 +59,7 @@ class VoteInfoButtons extends Component {
               target="_blank"
               rel="noopener noreferrer">
                 <button type="button" className="btn btn-primary">
-                  Voting Location Info
+                  Find Voting Location
                 </button>
             </a>
           </li>
