@@ -142,8 +142,8 @@ main {
       }
       
       .electionAuthorityAddress {
-        margin-top: 3rem;
-        padding: 1rem;
+        background: #eee;
+        padding: 3rem 1rem 1rem;
       }
       
     }
@@ -199,6 +199,11 @@ main {
         
         li {
           margin: 0 1rem;
+          
+          a {
+            font-size: 1.33rem;
+          }
+          
         }
       
       }
@@ -228,8 +233,17 @@ main {
 .representativesCard, .officeRacesCard, .upcomingRacesCard, .upcomingReferendumCard {
   
   button {
-    width: 50%;
+    width: auto;
+    min-width: 250px;
     margin: 1rem auto;
+  }
+  
+}
+
+.referendum {
+  
+  button {
+    max-width: 50%;
   }
   
 }
