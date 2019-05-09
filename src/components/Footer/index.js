@@ -20,7 +20,7 @@ class Footer extends Component {
 
         <footer role="contentinfo" aria-label="footer">
 
-          <section className="subfooter py-3">
+          <section className="subfooter">
             <ul className="nav justify-content-center">
               <li className="nav-item">
                 <a
@@ -52,10 +52,20 @@ class Footer extends Component {
                   Ballotpedia
                 </a>
               </li>
+              <li className="nav-item">
+                <a
+                  className="nav-link active"
+                  href="https://github.com/jbratcher/VoteInfo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Github Repo
+                </a>
+              </li>
             </ul>
           </section>
 
-          <h3 className="text-secondary py-3">VoteInfo 2019</h3>
+          <h3>VoteInfo 2019</h3>
 
         </footer>
 

@@ -27,8 +27,6 @@ class FederalRepresentatives extends Component {
 
         <h4 className="card-title" hidden>Federal Representatives</h4>
         
-        <section className="card federalRepresentativesCard">
-
           <button
             className="btn btn-secondary"
             type="button"
@@ -112,8 +110,6 @@ class FederalRepresentatives extends Component {
             </section>
             
           </section>
-
-        </section>
 
       </section>
 
