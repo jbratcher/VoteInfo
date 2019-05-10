@@ -331,6 +331,20 @@ footer {
 
 }
 
+.socialLinks {
+  display: flex;
+  
+  li {
+    margin: 0.25rem;
+    
+    a i {
+      font-size: 1.66rem;
+    }
+    
+  }
+  
+}
+
 @media only screen and (max-width: 1000px) {
   
   header .navbar {

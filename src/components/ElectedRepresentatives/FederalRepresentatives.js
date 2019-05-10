@@ -84,17 +84,57 @@ class FederalRepresentatives extends Component {
                         <h5 className="card-title">
                           {electedRepresentativesData.officials[officialIndex].name}
                         </h5>
+                        
                         <h6 className="card-subtitle mb-2 text-muted">
                           {electedRepresentativesData.officials[officialIndex].party}
                         </h6>
+                        
                         <a
                           href={electedRepresentativesData.officials[officialIndex].urls}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="card-link"
                         >
-                          Website
+                          Official Website
                         </a>
+                        
+                        <ul className="socialLinks">
+                        
+                          <li>
+                            <a
+                              href={`https://facebook.com/${electedRepresentativesData.officials[officialIndex].channels[0].id}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="card-link"
+                            >
+                              <i className="fab fa-facebook-square"></i>
+                            </a>
+                          </li>
+                          
+                          <li>
+                            <a
+                              href={`https://twitter.com/${electedRepresentativesData.officials[officialIndex].channels[1].id}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="card-link"
+                            >
+                              <i class="fab fa-twitter-square"></i>
+                            </a>
+                          </li>
+                          
+                          <li>
+                            <a
+                              href={`https://youtube.com/channel/${electedRepresentativesData.officials[officialIndex].channels[2].id}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="card-link"
+                            >
+                              <i class="fab fa-youtube-square"></i>
+                            </a>
+                          </li>
+                        
+                        </ul>
+                        
                       </section>
                       
                     </section>;
