@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SocialLinks from './SocialLinks';
 
 class FederalRepresentatives extends Component {
 
@@ -98,42 +99,10 @@ class FederalRepresentatives extends Component {
                           Official Website
                         </a>
                         
-                        <ul className="socialLinks">
-                        
-                          <li>
-                            <a
-                              href={`https://facebook.com/${electedRepresentativesData.officials[officialIndex].channels[0].id}`}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="card-link"
-                            >
-                              <i className="fab fa-facebook-square"></i>
-                            </a>
-                          </li>
-                          
-                          <li>
-                            <a
-                              href={`https://twitter.com/${electedRepresentativesData.officials[officialIndex].channels[1].id}`}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="card-link"
-                            >
-                              <i class="fab fa-twitter-square"></i>
-                            </a>
-                          </li>
-                          
-                          <li>
-                            <a
-                              href={`https://youtube.com/channel/${electedRepresentativesData.officials[officialIndex].channels[2].id}`}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="card-link"
-                            >
-                              <i class="fab fa-youtube-square"></i>
-                            </a>
-                          </li>
-                        
-                        </ul>
+                        <SocialLinks 
+                          electedRepresentativesData={electedRepresentativesData}
+                          officialIndex={officialIndex}
+                        />
                         
                       </section>
                       
