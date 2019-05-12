@@ -45,7 +45,7 @@ class UserAddress extends Component {
           
           </section>
 
-          <section class="changeAddress">
+          <section className="changeAddress">
             <button 
               className="btn btn-outline-secondary"
               onClick={addressReset}

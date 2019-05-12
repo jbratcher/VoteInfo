@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SocialLinks from './SocialLinks';
 
 class StateRepresentatives extends Component {
 
@@ -82,9 +83,11 @@ class StateRepresentatives extends Component {
                         <h5 className="card-text">
                           {electedRepresentativesData.officials[officialIndex].name}
                         </h5>
+                        
                         <h6 className="card-text text-muted">
                           {electedRepresentativesData.officials[officialIndex].party}
                         </h6>
+                        
                         <a
                           href={electedRepresentativesData.officials[officialIndex].urls}
                           target="_blank"
@@ -93,6 +96,11 @@ class StateRepresentatives extends Component {
                         >
                           Website
                         </a>
+                        
+                        <SocialLinks 
+                          electedRepresentativesData={electedRepresentativesData}
+                          officialIndex={officialIndex}
+                        />
                         
                       </section>
                       
