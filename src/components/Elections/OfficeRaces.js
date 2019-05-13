@@ -85,6 +85,60 @@ class OfficeRaces extends Component {
                             >
                               Website
                             </a>
+
+                              { candidate.channels ?
+
+                              <ul className="socialLinks">
+
+                                { candidate.channels[0] ?
+
+                                <li>
+                                  <a
+                                    href={candidate.channels[0].id}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="card-link"
+                                  >
+                                    <i className="fab fa-facebook-square"></i>
+                                  </a>
+                                </li>
+
+                                : null }
+
+                                { candidate.channels[1] ?
+
+                                <li>
+                                  <a
+                                    href={candidate.channels[1].id}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="card-link"
+                                  >
+                                    <i className="fab fa-twitter-square"></i>
+                                  </a>
+                                </li>
+
+                                : null }
+
+                                { candidate.channels[2] ?
+
+                                <li>
+                                  <a
+                                    href={candidate.channels[2].id}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="card-link"
+                                  >
+                                    <i className="fab fa-youtube-square"></i>
+                                  </a>
+                                </li>
+
+                                : null }
+
+                              </ul>
+
+                              : null }
+
                           </section>
                         </section>
         

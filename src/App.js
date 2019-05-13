@@ -39,7 +39,8 @@ class App extends Component {
       street2: "",
       city: "",
       state: "",
-      country: ""
+      country: "",
+      votingDataRecieved: false
     });
   }
 
