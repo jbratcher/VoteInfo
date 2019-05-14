@@ -58,31 +58,36 @@ class Referendum extends Component {
                     aria-expanded="true"
                     aria-controls={`#${contest.referendumTitle}upcoming`}
                   >
-                    {contest.referendumTitle}
+                    {`Referendum ${key}`}
                   </button>
         
                   <section
                     className="collapse"
                     id={`${contest.referendumTitle}upcoming`}
                   >
+
+                    <section className="card">
                 
-                    <section className="card-body">
+                      <section className="card-body">
+
+                        <h5 className="card-title">{contest.referendumTitle}</h5>
+                        
+                        <p className="card-text">{contest.referendumSubtitle}</p>
+
+                        <p className="card-text">
+                          <a 
+                            href={contest.referendumUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Link to full text
+                          </a>
+                        </p>
+
+                      </section>
                   
-                      <h5 className="card-title">{contest.referendumTitle}</h5>
-                      <h6 className="card-subtitle">{contest.referendumSubtitle}</h6>
-  
-                      <p className="card-text">
-                        <a 
-                          href={contest.referendumUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Referendum Link
-                        </a>
-                      </p>
-                      
                     </section>
-                  
+
                   </section>
   
                 </section>;
