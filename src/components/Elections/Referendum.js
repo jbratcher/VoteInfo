@@ -11,7 +11,7 @@ class Referendum extends Component {
   }
 
   componentDidMount() {
-    console.log("ballots loaded");
+    console.log("Upcoming Referendum loaded");
   }
 
 
@@ -58,7 +58,7 @@ class Referendum extends Component {
                     aria-expanded="true"
                     aria-controls={`#${contest.referendumTitle}upcoming`}
                   >
-                    {`Referendum ${key}`}
+                    {contest.referendumTitle.substring(0, 20)}
                   </button>
         
                   <section

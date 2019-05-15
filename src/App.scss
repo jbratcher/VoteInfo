@@ -23,6 +23,10 @@ h5.card-title {
   white-space: pre-wrap;
 }
 
+div.dropdown-menu.show {
+  left: -6vw;
+}
+
 // sections
 
 .app {
@@ -66,6 +70,7 @@ header {
       background: #eee;
       margin-left: auto;
       margin-right: 3rem;
+      
     }
     
   }

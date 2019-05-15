@@ -35,18 +35,27 @@ class Header extends Component {
                 <li className="nav-item active">
                   <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
                 </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#top">Link</a>
-                </li>
                 <li className="nav-item dropdown">
                   <a className="nav-link dropdown-toggle" href="#top" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
+                    Voter Links
                   </a>
                   <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a className="dropdown-item" href="#navbarDropdown">Action</a>
-                    <a className="dropdown-item" href="#navbarDropdown">Another action</a>
-                    <div className="dropdown-divider"></div>
-                    <a className="dropdown-item" href="#navbarDropdown">Something else here</a>
+                    <a 
+                      className="dropdown-item" 
+                      href="https://ballotpedia.org/Main_Page"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                        Ballotpedia
+                    </a>
+                    <a 
+                      className="dropdown-item" 
+                      href="https://www.eac.gov/voters/voter-resources-helpful-links/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                        Helpful Links &amp; Resources
+                    </a>
                   </div>
                 </li>
               </ul>

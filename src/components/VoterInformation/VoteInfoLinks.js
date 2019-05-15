@@ -11,7 +11,7 @@ class VoteInfoButtons extends Component {
   }
 
   componentDidMount() {
-    console.log("Vote Info Buttons loaded");
+    console.log("Vote Info Links loaded");
   }
 
 
