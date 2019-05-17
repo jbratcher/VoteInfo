@@ -100,7 +100,7 @@ class Referendum extends Component {
     
             }) 
             
-          : <p className="card-text my-auto">No upcoming Referendum</p> }
+          : <h4 className="card-text py-3">No upcoming Referendum</h4> }
   
           </section>
   
