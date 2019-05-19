@@ -103,6 +103,39 @@ class FederalRepresentatives extends Component {
                           electedRepresentativesData={electedRepresentativesData}
                           officialIndex={officialIndex}
                         />
+                     
+                        <button
+                          className="btn btn-secondary"
+                          id="moreInfoButton"
+                          type="button"
+                          data-toggle="collapse"
+                          data-target={`#${office.name}MoreInfo`}
+                          aria-expanded="true"
+                          aria-controls={`#${office.name}MoreInfo`}
+                        >
+                          More Info
+                        </button>
+
+                        <section
+                          className="collapse"
+                          id={`${office.name}MoreInfo`}
+                        >
+
+                           {electedRepresentativesData.officials[officialIndex].address ?
+
+                           <p class="card-text">
+                            
+                             {electedRepresentativesData.officials[officialIndex].address[0].line1}, <br></br>
+                             {electedRepresentativesData.officials[officialIndex].address[0].line2}, <br></br>
+                             {electedRepresentativesData.officials[officialIndex].address[0].city}, <br></br>
+                             {electedRepresentativesData.officials[officialIndex].address[0].state}, <br></br>
+                             {electedRepresentativesData.officials[officialIndex].address[0].zip}
+                            
+                           </p>
+                
+                           : null }
+
+                         </section>
                         
                       </section>
                       
