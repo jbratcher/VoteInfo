@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/VoteInfo/static/js/runtime~main.a848771c.js"
   },
   {
-    "revision": "dcb2e1c19a73b01a73f4",
-    "url": "/VoteInfo/static/js/main.50cafe90.chunk.js"
+    "revision": "96112626d3023c23bfcf",
+    "url": "/VoteInfo/static/js/main.b16df801.chunk.js"
   },
   {
     "revision": "73080c8c5313bf1fb476",
     "url": "/VoteInfo/static/js/2.d519b009.chunk.js"
   },
   {
-    "revision": "dcb2e1c19a73b01a73f4",
-    "url": "/VoteInfo/static/css/main.1c964a08.chunk.css"
+    "revision": "96112626d3023c23bfcf",
+    "url": "/VoteInfo/static/css/main.b823d704.chunk.css"
   },
   {
-    "revision": "7a4ae17cdcdff5fd74bfa734306e7cb7",
+    "revision": "75d8a14e95a390e88ac81ac92b49503f",
     "url": "/VoteInfo/index.html"
   }
 ];
