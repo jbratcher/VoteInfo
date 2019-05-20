@@ -109,32 +109,62 @@ class FederalRepresentatives extends Component {
                           id="moreInfoButton"
                           type="button"
                           data-toggle="collapse"
-                          data-target={`#${office.name}MoreInfo`}
+                          data-target={`#${office.name}${officialIndex}MoreInfo`}
                           aria-expanded="true"
-                          aria-controls={`#${office.name}MoreInfo`}
+                          aria-controls={`${office.name}${officialIndex}MoreInfo`}
                         >
                           More Info
                         </button>
 
                         <section
                           className="collapse"
-                          id={`${office.name}MoreInfo`}
+                          id={`${office.name}${officialIndex}MoreInfo`}
                         >
 
-                           {electedRepresentativesData.officials[officialIndex].address ?
+                           <section>
 
-                           <p class="card-text">
-                            
-                             {electedRepresentativesData.officials[officialIndex].address[0].line1}, <br></br>
-                             {electedRepresentativesData.officials[officialIndex].address[0].line2}, <br></br>
-                             {electedRepresentativesData.officials[officialIndex].address[0].city}, <br></br>
-                             {electedRepresentativesData.officials[officialIndex].address[0].state}, <br></br>
-                             {electedRepresentativesData.officials[officialIndex].address[0].zip}
-                            
-                           </p>
-                
-                           : null }
+                             <h5>Mailing Address:</h5>
 
+                             {electedRepresentativesData.officials[officialIndex].address ?
+
+                             <p class="card-text">
+
+                               {electedRepresentativesData.officials[officialIndex].address[0].line1}, <br></br>
+                               {electedRepresentativesData.officials[officialIndex].address[0].line2}, <br></br>
+                               {electedRepresentativesData.officials[officialIndex].address[0].city}, <br></br>
+                               {electedRepresentativesData.officials[officialIndex].address[0].state}, <br></br>
+                               {electedRepresentativesData.officials[officialIndex].address[0].zip}
+
+                             </p>
+
+                             : 
+                              
+                             <p class="card-text">No address found.</p>
+
+                             }
+
+                          </section>
+                          
+                          <section>
+
+                             <h5>Contact Phone:</h5>
+
+                             {electedRepresentativesData.officials[officialIndex].phones ?
+
+                             <p class="card-text">
+
+                               {electedRepresentativesData.officials[officialIndex].phones[0]}
+
+                             </p>
+
+                             : 
+                              
+                             <p class="card-text">No phone found.</p>
+
+                             }
+
+                          </section>
+                           
                          </section>
                         
                       </section>
