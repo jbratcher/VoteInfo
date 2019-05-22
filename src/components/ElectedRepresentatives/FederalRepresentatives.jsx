@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import SocialLinks from './SocialLinks';
+import MoreInfo from './MoreInfo';
+import noPhotoAvailable from '../../assets/images/no-image.png';
 
 class FederalRepresentatives extends Component {
 
@@ -69,18 +71,23 @@ class FederalRepresentatives extends Component {
                       </section>
                       
                       <section className="card-body">
-                      
-                        { electedRepresentativesData.officials[officialIndex].photoUrl ?
                         
                         <figure>
-                          <img
-                            className="card-img-top"
-                            src={electedRepresentativesData.officials[officialIndex].photoUrl}
-                            alt={electedRepresentativesData.officials[officialIndex].name}
+                          { electedRepresentativesData.officials[officialIndex].photoUrl
+                           ?
+                          <img 
+                              className="card-img-top"
+                              src={electedRepresentativesData.officials[officialIndex].photoUrl}
+                              alt={electedRepresentativesData.officials[officialIndex].name}
                           ></img>
+                          :
+                          <img
+                              className="card-img-top noPhotoAvailable"
+                              src={noPhotoAvailable} 
+                              alt={electedRepresentativesData.officials[officialIndex].name}
+                            ></img>
+                          }
                         </figure>
-                        
-                        : null }
                     
                         <h5 className="card-title">
                           {electedRepresentativesData.officials[officialIndex].name}
@@ -102,70 +109,12 @@ class FederalRepresentatives extends Component {
                         <SocialLinks 
                           electedRepresentativesData={electedRepresentativesData}
                           officialIndex={officialIndex}
-                        />
+                        /> 
                      
-                        <button
-                          className="btn btn-secondary"
-                          id="moreInfoButton"
-                          type="button"
-                          data-toggle="collapse"
-                          data-target={`#${office.name}${officialIndex}MoreInfo`}
-                          aria-expanded="true"
-                          aria-controls={`${office.name}${officialIndex}MoreInfo`}
-                        >
-                          More Info
-                        </button>
-
-                        <section
-                          className="collapse"
-                          id={`${office.name}${officialIndex}MoreInfo`}
-                        >
-
-                           <section>
-
-                             <h5>Mailing Address:</h5>
-
-                             {electedRepresentativesData.officials[officialIndex].address ?
-
-                             <p class="card-text">
-
-                               {electedRepresentativesData.officials[officialIndex].address[0].line1}, <br></br>
-                               {electedRepresentativesData.officials[officialIndex].address[0].line2}, <br></br>
-                               {electedRepresentativesData.officials[officialIndex].address[0].city}, <br></br>
-                               {electedRepresentativesData.officials[officialIndex].address[0].state}, <br></br>
-                               {electedRepresentativesData.officials[officialIndex].address[0].zip}
-
-                             </p>
-
-                             : 
-                              
-                             <p class="card-text">No address found.</p>
-
-                             }
-
-                          </section>
-                          
-                          <section>
-
-                             <h5>Contact Phone:</h5>
-
-                             {electedRepresentativesData.officials[officialIndex].phones ?
-
-                             <p class="card-text">
-
-                               {electedRepresentativesData.officials[officialIndex].phones[0]}
-
-                             </p>
-
-                             : 
-                              
-                             <p class="card-text">No phone found.</p>
-
-                             }
-
-                          </section>
-                           
-                         </section>
+                        <MoreInfo 
+                          electedRepresentativesData={electedRepresentativesData}
+                          officialIndex={officialIndex}
+                        /> 
                         
                       </section>
                       
