@@ -32,6 +32,22 @@ div.dropdown-menu.show {
   min-width: min-content;
 }
 
+section[id*="MoreInfo"] {
+
+  section {
+    
+    h5, p {
+      margin: 0.25rem 0;
+    } 
+
+    h5:last-of-type {
+      margin-top: 0.5rem;
+    }
+
+  }
+
+}
+
 .noPhotoAvailable {
   height: 200px;
   max-height: min-content;
