@@ -32,6 +32,18 @@ div.dropdown-menu.show {
   min-width: min-content;
 }
 
+.moreInfo {
+  
+  h5 {
+    margin-top: 0.5rem;
+  }
+  
+  p {
+    padding: 0.5rem 0;
+  }
+  
+}
+
 .noPhotoAvailable {
   height: 200px;
   max-height: min-content;

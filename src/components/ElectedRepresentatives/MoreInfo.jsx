@@ -43,7 +43,7 @@ class MoreInfo extends Component {
           id={`${electedRepresentativesData.officials[officialIndex].name}MoreInfo`}
         >
 
-          <section>
+          <section className="moreInfo">
 
            <h5>Mailing Address:</h5>
 

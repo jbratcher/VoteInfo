@@ -47,10 +47,10 @@ class StateRepresentatives extends Component {
             <section className="card-body text-center stateRepresentatives">
             
             {electedRepresentativesData ?
-              // get offices that have a level key/value that is "country" and iterate
+              // get offices that have a level key/value that is "state" and iterate
               electedRepresentativesData.offices
-                .filter(office => office.levels)
-                .filter(office => office.levels[0] === "administrativeArea1")
+                .filter(office => office.divisionId.match(/ky$/) &&
+                        office.name !== "United States Senate")
                 .map((office, key) => {
   
                 return <section

@@ -49,7 +49,7 @@ class LocalRepresentatives extends Component {
             {electedRepresentativesData ?
   
               electedRepresentativesData.offices
-                .filter(office => !office.levels)
+                .filter(office => office.divisionId.match(/county/))
                 .map((office, key) => {
   
                 return <section
