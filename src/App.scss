@@ -42,6 +42,8 @@ div.dropdown-menu.show {
     padding: 0.5rem 0;
   }
   
+}
+  
 section[id*="MoreInfo"] {
 
   section {
@@ -460,12 +462,10 @@ footer {
       
     }
 
-  .federalRepresentatives, .stateRepresentatives {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    .federalRepresentatives, .stateRepresentatives {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
   }
-
-
 
 }
