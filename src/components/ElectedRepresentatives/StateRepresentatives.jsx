@@ -49,7 +49,9 @@ class StateRepresentatives extends Component {
             {electedRepresentativesData ?
               // get offices that have a level key/value that is "state" and iterate
               electedRepresentativesData.offices
-                .filter(office => office.divisionId.match(/ky$/) &&
+                .filter(office => office.divisionId.match(
+                  /(a[klrz]|c[aot]|d[ce]|fl|ga|hi|i[adln]|k[sy]|la|m[adeinost]|n[cdehjmvy]|o[hkr]|p[ar]|ri|s[cd]|t[nx]|ut|v[ait]|w[aivy])(?!\/)$/
+                  ) &&
                         office.name !== "United States Senate")
                 .map((office, key) => {
   
