@@ -13,7 +13,7 @@ class VoterAddresses extends Component {
   }
 
   componentDidMount() {
-    console.log("Voter Information loaded");
+    console.log("voter address index loaded");
   }
 
 

@@ -47,7 +47,7 @@ class StateRepresentatives extends Component {
             <section className="card-body text-center stateRepresentatives">
             
             {electedRepresentativesData ?
-              // get offices that have a level key/value that is "state" and iterate
+              // get offices that have a level key, match regex to lowercase state 2 letter code that ends string (api specific)
               electedRepresentativesData.offices
                 .filter(office => office.divisionId.match(
                   /(a[klrz]|c[aot]|d[ce]|fl|ga|hi|i[adln]|k[sy]|la|m[adeinost]|n[cdehjmvy]|o[hkr]|p[ar]|ri|s[cd]|t[nx]|ut|v[ait]|w[aivy])(?!\/)$/

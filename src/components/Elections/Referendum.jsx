@@ -11,7 +11,7 @@ class Referendum extends Component {
   }
 
   componentDidMount() {
-    console.log("Upcoming Referendum loaded");
+    console.log("upcoming referendum loaded");
   }
 
 

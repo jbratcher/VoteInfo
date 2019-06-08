@@ -8,12 +8,6 @@ class Header extends Component {
     this.state = {};
   }
 
-
-  componentDidMount() {
-    console.log("Header loaded");
-  }
-
-
   render() {
 
     return (

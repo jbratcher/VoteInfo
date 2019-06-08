@@ -11,7 +11,7 @@ class ElectionAuthorityAddress extends Component {
   }
 
   componentDidMount() {
-    console.log("Election Authority Address loaded");
+    console.log("election authority address loaded");
   }
 
 

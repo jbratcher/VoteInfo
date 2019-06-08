@@ -10,11 +10,6 @@ class SocialLinks extends Component {
     };
   }
 
-  componentDidMount() {
-    console.log("social links loaded");
-  }
-
-
   render() {
 
     const {

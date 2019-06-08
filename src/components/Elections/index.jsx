@@ -13,7 +13,7 @@ class Elections extends Component {
   }
 
   componentDidMount() {
-    console.log("race loaded");
+    console.log("elections index loaded");
   }
 
 

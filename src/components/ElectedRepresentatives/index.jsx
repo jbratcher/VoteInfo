@@ -14,7 +14,7 @@ class ElectedRepresentatives extends Component {
   }
 
   componentDidMount() {
-    console.log("elected representatives loaded");
+    console.log("Elected Reps Index loaded");
   }
 
 

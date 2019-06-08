@@ -10,11 +10,6 @@ class MoreInfo extends Component {
     };
   }
 
-  componentDidMount() {
-    console.log("more info loaded");
-  }
-
-
   render() {
 
     const {

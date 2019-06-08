@@ -11,7 +11,7 @@ class OfficeRaces extends Component {
   }
 
   componentDidMount() {
-    console.log("race loaded");
+    console.log("upcoming office races loaded");
   }
 
 

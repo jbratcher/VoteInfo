@@ -13,7 +13,7 @@ class VoterInformation extends Component {
   }
 
   componentDidMount() {
-    console.log("Voter Information loaded");
+    console.log("voter information loaded");
   }
 
 

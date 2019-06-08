@@ -8,12 +8,6 @@ class Footer extends Component {
     this.state = {};
   }
 
-
-  componentDidMount() {
-    console.log("Footer loaded");
-  }
-
-
   render() {
 
     return (
