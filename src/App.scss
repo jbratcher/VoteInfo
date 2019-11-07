@@ -9,6 +9,10 @@ ul {
   margin-bottom: 0;
 }
 
+.navbar-light .navbar-toggler {
+  border: none;
+}
+
 .card-header {
   display: flex;
   flex-direction: column;
@@ -401,8 +405,48 @@ footer {
 
 @media only screen and (max-width: 1000px) {
   
-  header .navbar {
-    grid-template-columns: 2fr 5fr;
+  header {
+
+    .navbar {
+      grid-template-columns: 1fr 1fr;
+
+      #brand {
+        margin-right: 0;
+        margin-left: 1rem;
+        justify-self: flex-start;
+      }
+    
+      button.navbar-toggler {
+        justify-self: flex-end;
+      }
+
+      #mainNav {
+        grid-area: 2 / 2 / 3 / 3;
+        margin-right: 0;
+        padding: 0.25rem 0.75rem;
+
+        ul {
+          align-items: flex-end;
+        }
+
+      }
+
+      #navbarDropdown {
+        align-self: flex-end;
+      }
+
+      .nav-item {
+        width: inherit;
+      }
+  
+      .nav-item.dropdown {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+    }
+
   }
  
   main {

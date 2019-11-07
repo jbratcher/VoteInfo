@@ -141,7 +141,6 @@ class App extends Component {
             votingDataRecieved={votingDataRecieved}
           />
 
-
           { votingDataRecieved ?
 
             <section className="dataOutput">
