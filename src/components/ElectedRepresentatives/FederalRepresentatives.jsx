@@ -51,7 +51,7 @@ class FederalRepresentatives extends Component {
             {electedRepresentativesData ?
               // get offices that have a level key/value that is "country" and iterate
               electedRepresentativesData.offices
-                .filter(office => office.levels)
+                .filter(office => office.levels) // check if levels property is defined
                 .filter(office => office.levels[0] === "country")
                 .map((office, key) => {
   
@@ -97,14 +97,16 @@ class FederalRepresentatives extends Component {
                           {electedRepresentativesData.officials[officialIndex].party}
                         </h6>
                         
-                        <a
-                          href={electedRepresentativesData.officials[officialIndex].urls}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="card-link"
-                        >
-                          Official Website
-                        </a>
+                        { electedRepresentativesData.officials[officialIndex].urls ?
+                          <a
+                            href={electedRepresentativesData.officials[officialIndex].urls}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="card-link"
+                          >
+                            Official Website
+                          </a>
+                        : null }
                         
                         <SocialLinks 
                           electedRepresentativesData={electedRepresentativesData}

@@ -291,7 +291,8 @@ main {
   button {
     font-size: 1.25rem;
     margin: 1rem;
-    width: 250px;
+    min-width: 250px;
+    width: fit-content;
   }
   
 }
@@ -341,6 +342,14 @@ main {
   
 }
 
+.stateRepresentatives > .card > .card > .card-header {
+  min-height: 7rem;
+}
+
+.localRepresentatives > .card > .card > .card-header {
+  min-height: 9rem;
+}
+
 .federalRepresentatives {
   grid-template-columns: repeat(2, 1fr) 2fr 1fr;
   
@@ -350,11 +359,11 @@ main {
 }
 
 .stateRepresentatives {
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .localRepresentatives {
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   
   &>.card {
     display: contents;

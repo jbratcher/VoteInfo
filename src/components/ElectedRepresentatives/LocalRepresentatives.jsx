@@ -77,7 +77,7 @@ class LocalRepresentatives extends Component {
                               alt={electedRepresentativesData.officials[officialIndex].name}
                             ></img>
                           </figure>
-                        : null}
+                        : null }
                       
                         <h5 className="card-text">
                           {electedRepresentativesData.officials[officialIndex].name}
@@ -87,14 +87,16 @@ class LocalRepresentatives extends Component {
                           {electedRepresentativesData.officials[officialIndex].party}
                         </h6>
                         
-                        <a
-                          href={electedRepresentativesData.officials[officialIndex].urls}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="card-link"
-                        >
-                          Website
-                        </a>
+                        { electedRepresentativesData.officials[officialIndex].urls ?
+                          <a
+                            href={electedRepresentativesData.officials[officialIndex].urls}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="card-link"
+                          >
+                            Official Website
+                          </a>
+                        : null }
                         
                         <SocialLinks 
                           electedRepresentativesData={electedRepresentativesData}
@@ -111,7 +113,7 @@ class LocalRepresentatives extends Component {
   
                 })
   
-              :null }
+              : null }
             
           </section>
 

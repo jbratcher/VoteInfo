@@ -52,7 +52,7 @@ class StateRepresentatives extends Component {
                 .filter(office => office.divisionId.match(
                   /(a[klrz]|c[aot]|d[ce]|fl|ga|hi|i[adln]|k[sy]|la|m[adeinost]|n[cdehjmvy]|o[hkr]|p[ar]|ri|s[cd]|t[nx]|ut|v[ait]|w[aivy])(?!\/)$/
                   ) &&
-                        office.name !== "United States Senate")
+                        office.name !== "U.S. Senator")
                 .map((office, key) => {
   
                 return <section
@@ -90,14 +90,16 @@ class StateRepresentatives extends Component {
                           {electedRepresentativesData.officials[officialIndex].party}
                         </h6>
                         
-                        <a
-                          href={electedRepresentativesData.officials[officialIndex].urls}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="card-link"
-                        >
-                          Website
-                        </a>
+                        { electedRepresentativesData.officials[officialIndex].urls ?
+                          <a
+                            href={electedRepresentativesData.officials[officialIndex].urls}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="card-link"
+                          >
+                            Official Website
+                          </a>
+                        : null }
                         
                         <SocialLinks 
                           electedRepresentativesData={electedRepresentativesData}
